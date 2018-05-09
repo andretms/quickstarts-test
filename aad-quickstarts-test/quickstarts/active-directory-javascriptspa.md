@@ -35,7 +35,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > 2. Make sure **Implict flow** is **checked**
 > 3. Click *Save*
 
-> [div renderon="portal" id="makechanges"]
+> [!div renderon="portal" id="makechanges"]
 
 > [!div renderon="docs"]
 > ## Step 2: Register your application
