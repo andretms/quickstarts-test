@@ -46,3 +46,14 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
     private static string ClientId = "Enter_the_Application_Id_here";
     ```
 
+## What is next
+
+Try out the Windows Desktop tutorials for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart:
+
+### Learn the steps to create the application for this Quickstart
+
+> [!div class="nextstepaction"]
+> [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-windesktop)
+
+(/includes/active-directory-develop-help-support-include.md)]
+

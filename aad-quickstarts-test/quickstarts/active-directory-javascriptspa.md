@@ -128,17 +128,21 @@ Calling the *acquireTokenRedirect(scope)* result in redirecting users to the Azu
 ```javascript
 userAgentApplication.acquireTokenRedirect(graphAPIScopes);
 ```
-<!--
+
 ## What is next
 
 Try out the JavaScript tutorials for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart, and other tutorials, like call Microsoft Graph API, sign-out:
 
 ### Learn the steps to create the application for this Quickstart
-> [!div class="nextstepaction"]
-> [Sign-In users tutorial](..\tutorials\active-directory-javascriptspa-sign-in.md)
 
+> [!div class="nextstepaction"]
+> [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa)
+
+<!--
 ### Learn other scenarios
 > [!div class="nextstepaction"]
 > [Sign-Out tutorial](..\tutorials\active-directory-javascriptspa-sign-out.md)
 > [Call Graph API tutorial](..\tutorials\active-directory-javascriptspa-call-graph-api.md)
 -->
+
+[!INCLUDE [Help and support](/includes/active-directory-develop-help-support-include.md)]
