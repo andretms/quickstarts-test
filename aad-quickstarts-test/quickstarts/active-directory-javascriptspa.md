@@ -145,4 +145,4 @@ Try out the JavaScript tutorials for a complete step-by-step guide on building a
 > [Call Graph API tutorial](..\tutorials\active-directory-javascriptspa-call-graph-api.md)
 -->
 
-[!INCLUDE [Help and support](/includes/active-directory-develop-help-support-include.md)]
+[!INCLUDE [Help and support](../../includes/active-directory-develop-help-support-include.md)]
