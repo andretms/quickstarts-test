@@ -55,5 +55,4 @@ Try out the Windows Desktop tutorials for a complete step-by-step guide on build
 > [!div class="nextstepaction"]
 > [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-windesktop)
 
-(/includes/active-directory-develop-help-support-include.md)]
-
+[!INCLUDE [Help and support](/aad-quickstarts-test/includes/active-directory-develop-help-support-include.md)]
