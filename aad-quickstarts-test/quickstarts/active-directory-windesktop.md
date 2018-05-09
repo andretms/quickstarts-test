@@ -46,11 +46,82 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
     private static string ClientId = "Enter_the_Application_Id_here";
     ```
 
+## More Information
+
+Below an overview of this Quickstart:
+
+### MSAL.NET
+
+MSAL ([Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory. You can install it by running the following command in Visual Studio's *Package Manager Console*:
+
+```powershell
+Install-Package Microsoft.Identity.Client -Pre
+```
+
+### MSAL Initialization
+
+You can add the reference for MSAL by adding the line below:
+
+```csharp
+using Microsoft.Identity.Client;
+```
+
+Then initialize MSAL using the line below:
+
+```csharp
+public static PublicClientApplication PublicClientApp = new PublicClientApplication(ClientId);
+```
+
+Where:
+> |||
+> |---------|---------|
+> |ClientId | The Application Id from the application registered in *portal.microsoft.com* |
+
+### Requesting tokens
+
+Msal has two methods used acquire tokens - `AcquireTokenAsync` and `AcquireTokenSilentAsync`:
+
+#### Getting a user token interactively
+
+ There are situations that you need to force users interact with Azure Active Directory v2 endpoint via an popup window – some examples include:
+
+- The first time users signs-in to the application
+- Users may need to reenter their credentials because the password has expired
+- Your application is requesting access to a resource that the user needs to consent to
+- Two factor authentication is required
+
+```csharp
+authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
+```
+
+Where:
+
+> |||
+> |---------|---------|
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }`) |
+> |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL has support for multiple users) |
+
+Calling the *AcquireTokenAsync(scope)* results in a  popup window to the Azure Active Directory v2 endpoint where users need to interact with by either confirming their credentials, giving the consent to the required resource, or completing the two factor authentication.
+
+#### Getting a user token silently
+
+You don't want to require user to validate their credentials every time they need to access a resource - most of the time you want token acquisitions and renewal without any user interaction - `AcquireTokenSilentAsync` is the method commonly used to obtain tokens used to access protected resources after the initial `AcquireTokenAsync`:
+
+```csharp
+authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
+```
+
+Where:
+
+> |||
+> |---------|---------|
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }`) |
+
 ## What is next
 
-Try out the Windows Desktop tutorials for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart:
+Try out the Windows Desktop tutorial for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart:
 
-### Learn the steps to create the application for this Quickstart
+### Learn the steps to create the application used in this Quickstart
 
 > [!div class="nextstepaction"]
 > [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-windesktop)
