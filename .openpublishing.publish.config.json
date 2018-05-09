@@ -28,6 +28,11 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "active-directory-javascript-graphapi-v2",
+      "url": "https://github.com/andretms/active-directory-javascript-graphapi-v2.git",
+      "branch": "Sign-In"
     }
   ],
   "branch_target_mapping": {},
