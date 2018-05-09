@@ -30,7 +30,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 - [Download the core project files - for a local web server, such as Python](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
 
 > [!div class="sxs-lookup" renderon="portal"]
-> ## Step 2: Register your application
+> ## Step 2: Configure your application registration
 > 1. Select **Authentication** tab and add a reply URL correspond to the application's URL based on your web server
 > 2. Make sure **Implict flow** is **checked**
 > 3. Click *Save*
@@ -53,11 +53,10 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 >> python -m http.server 30662
 >> ```
 
-
 ## Step 3: Configure your JavaScript SPA
 
-1. Still in the Azure Portal, switch to the **Overview** tab and copy the value for **Application ID** to the clipboard
-2.	Edit `msalconfig.js` and replace <code>Enter_the_Application_Id_here</code> with the Application ID your application from the previous step:
+1. Still in the Azure Portal, copy the value for **Application ID** to the clipboard
+2.	Edit `msalconfig.js` and replace <code>Enter_the_Application_Id_here</code> with the Application ID your application:
 
     ```javascript
     var msalconfig = {
