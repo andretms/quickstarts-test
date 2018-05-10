@@ -98,10 +98,9 @@ Where:
 
 > |||
 > |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }`) |
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `api://<Application ID>/<scopeName>` for custom Web APIs) |
 > |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL has support for multiple users) |
 
-Calling the *AcquireTokenAsync(scope)* results in a  popup window to the Azure Active Directory v2 endpoint where users need to interact with by either confirming their credentials, giving the consent to the required resource, or completing the two factor authentication.
 
 #### Getting a user token silently
 
@@ -111,11 +110,9 @@ You don't want to require user to validate their credentials every time they nee
 authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
 ```
 
-Where:
-
-> |||
+> |Where:||
 > |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }`) |
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `api://<Application ID>/<scopeName>` for custom Web APIs |
 
 ## What is next
 
