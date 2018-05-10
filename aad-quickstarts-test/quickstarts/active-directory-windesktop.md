@@ -72,10 +72,9 @@ Then initialize MSAL using the line below:
 public static PublicClientApplication PublicClientApp = new PublicClientApplication(ClientId);
 ```
 
-Where:
-> |||
-> |---------|---------|
-> |ClientId | The Application Id from the application registered in *portal.microsoft.com* |
+|Where: ||
+|---------|---------|
+|ClientId | The Application Id from the application registered in *portal.microsoft.com* |
 
 ### Requesting tokens
 
@@ -94,13 +93,10 @@ Msal has two methods used acquire tokens - `AcquireTokenAsync` and `AcquireToken
 authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
 ```
 
-Where:
-
-> |||
-> |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `api://<Application ID>/<scopeName>` for custom Web APIs) |
-> |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL has support for multiple users) |
-
+|Where: ||
+|---------|---------|
+|_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+ |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL has support for multiple users) |
 
 #### Getting a user token silently
 
@@ -110,9 +106,9 @@ You don't want to require user to validate their credentials every time they nee
 authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
 ```
 
-> |Where:||
-> |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `api://<Application ID>/<scopeName>` for custom Web APIs |
+|Where:||
+|---------|---------|
+|_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
 
 ## What is next
 
