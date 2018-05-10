@@ -83,10 +83,12 @@ var userAgentApplication = new Msal.UserAgentApplication(msalconfig.clientID, nu
     redirectUri: msalconfig.redirectUri
 });
 ```
-Where:
-* **ClientId** is the Application Id from the application registered in the Azure Portal
-* **loginCallBack** is the name of a callback method called after the authentication
-* **redirectUri** is the URL where user will be sent after authentication against Azure AD v2 Endpoint
+
+> |Where  |  |
+> |---------|---------|
+> |ClientId     |Application Id from the application registered in the Azure Portal|
+> |loginCallBack | Name of a callback method called after the authentication|
+> |redirectUri     |URL where users are sent after authentication against Azure AD v2 Endpoint|
 
 ### Sign-in users
 
@@ -96,34 +98,38 @@ Below how you sign in users:
 userAgentApplication.loginRedirect(graphAPIScopes);
 ```
 
-Where:
-* **graphAPIScopes** is an optional parameter to specify the API scopes required at login time, for example *user.read*
+> |Where  |  |
+> |---------|---------|
+> |graphAPIScopes     | (Optional) Contains scopes being requested at login time (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs)|
 
-Alternativelly you may want to use *loginPopup* method to display a popup window for sign-in the user.
+> [!TIP]
+> Alternativelly you may want to use `loginPopup` method to display a popup window for sign-in the user.
 
 ### Requesting tokens
 
 Msal has two methods to used acquire tokens `acquireTokenRedirect` (or `acquireTokenPopup`) and `acquireTokenSilent`:
 
 #### Getting a user token silently
-The ` acquireTokenSilent` method handles token acquisitions and renewal without any user interaction. After `loginRedirect` (or `loginPopup`) is executed for the first time, `acquireTokenSilent` is the method commonly used to obtain tokens used to access protected resources for subsequent calls - as calls to request or renew tokens are made silently.
+
+The `acquireTokenSilent` method handles token acquisitions and renewal without any user interaction. After `loginRedirect` (or `loginPopup`) is executed for the first time, `acquireTokenSilent` is the method commonly used to obtain tokens used to access protected resources for subsequent calls - as calls to request or renew tokens are made silently.
 
 ```javascript
 // Try to acquire the token used to query Graph API silently first:
 userAgentApplication.acquireTokenSilent(graphAPIScopes)
 ```
-Where:
-* **graphAPIScopes** contains the scopes being requested.
+
+> |Where  |  |
+> |---------|---------|
+> |graphAPIScopes     | (Optional) Contains scopes being requested at login time (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs)|
 
 #### Getting a user token interactively
 
  There are situations however that you need to force users interact with Azure Active Directory v2 endpoint – some examples include:
--	Users may need to reenter their credentials because the password has expired
--	Your application is requesting access to a resource that the user needs to consent to
--	Two factor authentication is required
+- Users may need to reenter their credentials because the password has expired
+- Your application is requesting access to a resource that the user needs to consent to
+- Two factor authentication is required
 
 Calling the *acquireTokenRedirect(scope)* result in redirecting users to the Azure Active Directory v2 endpoint (or *acquireTokenPopup(scope)* result on a popup window) where users need to interact with by either confirming their credentials, giving the consent to the required resource, or completing the two factor authentication.
-
 
 ```javascript
 userAgentApplication.acquireTokenRedirect(graphAPIScopes);
