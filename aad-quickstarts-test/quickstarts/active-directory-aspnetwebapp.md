@@ -116,11 +116,11 @@ public void SignIn()
 ```
 
 > [!TIP]
-> Requesting an authentication challenge using the method above is optional and commonsly used when you want to implement a login button.
+> Requesting an authentication challenge using the method above is optional and commonsly used when you want a view to be available for both authenticated and non-authenticated users. You can protect controllers by using the method described in the next section.
 
 ### Protect a controller or a controller's method
 
-You can use the `[Authorize]` attribute to protect a controller or a method. This attribute restricts access to the controller by only allowing authenticated users - which means that authentication challenge will be started to access the controller if user is not authenticated.
+You can protect a controller or controller methodss using the `[Authorize]` attribute. This attribute restricts access to the controller or methods by only allowing authenticated users - which means that authentication challenge can be started to access the controller if user is not authenticated.
 
 ## What is next
 
