@@ -72,9 +72,9 @@ Then initialize MSAL using the line below:
 public static PublicClientApplication PublicClientApp = new PublicClientApplication(ClientId);
 ```
 
-|Where: ||
-|---------|---------|
-|ClientId | The Application Id from the application registered in *portal.microsoft.com* |
+> |Where: ||
+> |---------|---------|
+> |ClientId | The Application Id from the application registered in *portal.microsoft.com* |
 
 ### Requesting tokens
 
@@ -82,7 +82,7 @@ Msal has two methods used acquire tokens - `AcquireTokenAsync` and `AcquireToken
 
 #### Getting a user token interactively
 
- There are situations that you need to force users interact with Azure Active Directory v2 endpoint via an popup window – some examples include:
+ Some situations require forcing users interact with Azure Active Directory v2 endpoint via an popup window to either validate their credentials or five consent – some examples include:
 
 - The first time users signs-in to the application
 - Users may need to reenter their credentials because the password has expired
@@ -93,22 +93,22 @@ Msal has two methods used acquire tokens - `AcquireTokenAsync` and `AcquireToken
 authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
 ```
 
-|Where: ||
-|---------|---------|
-|_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
- |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL has support for multiple users) |
+> |Where:||
+> |---------|---------|
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
 
 #### Getting a user token silently
 
 You don't want to require user to validate their credentials every time they need to access a resource - most of the time you want token acquisitions and renewal without any user interaction - `AcquireTokenSilentAsync` is the method commonly used to obtain tokens used to access protected resources after the initial `AcquireTokenAsync`:
 
 ```csharp
-authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
+authResult = await App.PublicClientApp.AcquireTokenSilentAsync(_scopes, App.PublicClientApp.Users.FirstOrDefault());
 ```
 
-|Where:||
-|---------|---------|
-|_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> |Where: ||
+> |---------|---------|
+> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+ |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL support multiple users in a single app) |
 
 ## What is next
 
