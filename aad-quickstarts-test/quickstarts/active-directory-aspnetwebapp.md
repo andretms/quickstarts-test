@@ -99,7 +99,18 @@ public void Configuration(IAppBuilder app)
 }
 ```
 
-### Require user sign-in
+> |Where  |  |
+> |---------|---------|
+> |ClientId     |Application Id from the application registered in the Azure Portal|
+> |Authority | The STS endpoint fo user to authenticate. Usually https://login.microsoftonline.com/{tenant}/v2.0 for public cloud, where {tenant} is the name of your tenant, your tenant Id, or *common* for the common endpoint - used for multi-tenant applications|
+> |RedirectUri     |URL where users are sent after authentication against Azure AD v2 Endpoint|
+> |PostLogoutRedirectUri     |URL where users are sent after signing-off|
+> |Scope     |The list of scopes being requested, separated by spaces|
+> |ResponseType     |Request a respose contains an Id Token|
+> |TokenValidationParameters     | A list of parameters for token validation. In this case, `ValidateIssuer` is set to `false` to indicate that it can accept sign-ins from any personal, or work or school accounts|
+> |Notifications     | A list of delegates that can be executed on different OpenIdConnect messages|
+
+### Initiate an authentication challenge
 
 You can force user to sign in by requesting an authentication challenge in your controller:
 
