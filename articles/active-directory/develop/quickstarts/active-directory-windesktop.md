@@ -119,4 +119,4 @@ Try out the Windows Desktop tutorial for a complete step-by-step guide on buildi
 > [!div class="nextstepaction"]
 > [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-windesktop)
 
-[!INCLUDE [Help and support](../../../includes/active-directory-develop-help-support-include.md)]
+[!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]

@@ -5,6 +5,6 @@ This is the preview site for Quickstarts
 ## Check our quickstarts below:
 
 > [!div class="nextstepaction"]
-> [JavaScript](quickstarts/active-directory-javascriptspa.md)
-> [Windows Desktop](quickstarts/active-directory-windesktop.md)
-> [ASP.NET](quickstarts/active-directory-aspnetwebapp.md)
+> [JavaScript](articles/active-directory/develop/quickstarts/active-directory-javascriptspa.md)
+> [Windows Desktop](articles/active-directory/develop/quickstarts/active-directory-windesktop.md)
+> [ASP.NET](articles/active-directory/develop/quickstarts/active-directory-aspnetwebapp.md)
