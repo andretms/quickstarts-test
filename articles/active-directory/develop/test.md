@@ -38,6 +38,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > [!div renderon="portal" id="makechanges"]
 
 ::: zone render="docs"
+
 > ## Step 2: Register your application (DOCS ONLY)
 > 
 > 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
@@ -45,6 +46,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > 3. Select **Authentication** tab and add  *http://localhost:30662/*
 > 4. Make sure **Implict flow** is **checked**
 > 5. Click *Save*
+
 ::: zone-end
 
 ::: zone render="chromeless"
@@ -53,6 +55,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > 3. Select **Authentication** tab and add  *http://localhost:30662/*
 > 4. Make sure **Implict flow** is **checked**
 > 5. Click *Save*
+
 ::: zone-end
 
 > [!div renderon="docs"]
