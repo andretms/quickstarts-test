@@ -2,7 +2,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "aad-quickstarts-test",
-      "build_source_folder": "aad-quickstarts-test",
+      "build_source_folder": ".",
       "build_output_subfolder": "aad-quickstarts-test",
       "locale": "en-us",
       "monikers": [],

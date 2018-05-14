@@ -102,13 +102,13 @@ public void Configuration(IAppBuilder app)
 > |Where  |  |
 > |---------|---------|
 > |ClientId     |Application Id from the application registered in the Azure Portal|
-> |Authority | The STS endpoint fo user to authenticate. Usually https://login.microsoftonline.com/{tenant}/v2.0 for public cloud, where {tenant} is the name of your tenant, your tenant Id, or *common* for the common endpoint - used for multi-tenant applications|
+> |Authority | The STS endpoint fo user to authenticate. Usually https://login.microsoftonline.com/{tenant}/v2.0 for public cloud, where {tenant} is the name of your tenant, your tenant Id, or *common* for a reference to the common endpoint (used for multi-tenant applications)|
 > |RedirectUri     |URL where users are sent after authentication against Azure AD v2 Endpoint|
 > |PostLogoutRedirectUri     |URL where users are sent after signing-off|
 > |Scope     |The list of scopes being requested, separated by spaces|
 > |ResponseType     |Request a respose contains an Id Token|
 > |TokenValidationParameters     | A list of parameters for token validation. In this case, `ValidateIssuer` is set to `false` to indicate that it can accept sign-ins from any personal, or work or school accounts|
-> |Notifications     | A list of delegates that can be executed on different OpenIdConnect messages|
+> |Notifications     | A list of delegates that can be executed on different *OpenIdConnect* messages|
 
 ### Initiate an authentication challenge
 
@@ -142,4 +142,4 @@ Try out the ASP.NET tutorial for a complete step-by-step guide on building appli
 > [!div class="nextstepaction"]
 > [Sign-in Tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-aspnetwebapp)
 
-[!INCLUDE [Help and support](../../includes/active-directory-develop-help-support-include.md)]
+[!INCLUDE [Help and support](../../../includes/active-directory-develop-help-support-include.md)]
