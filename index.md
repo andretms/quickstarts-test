@@ -10,6 +10,6 @@ This is the preview site for Quickstarts
 > [ASP.NET](articles/active-directory/develop/quickstarts/active-directory-aspnetwebapp.md)
 
 
-### Test page
+### Test page for docs.microsoft.com integration
 
 [JavaScript](articles/active-directory/develop/test.md)
