@@ -5,7 +5,7 @@
       "priorities": [
         {
           "priority": "ht-test",
-          "locales": [ "pt-br", "es-es"],
+          "locales": [ "pt-br", "es-es" ],
           "type": "MT"
         }
       ]
@@ -13,5 +13,6 @@
   ],
   "includeDependencies": true,
   "autoPush": true,
-  "xliffVersion": "1.2"
+  "xliffVersion": "1.2",
+  "translationType": "MT" 
 }
