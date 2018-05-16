@@ -1,18 +1,8 @@
 {
-  "filters": [
-    {
-      "files": [ "**/*.md", "**/*.yml" ],
-      "priorities": [
-        {
-          "priority": "ht-test",
-          "locales": [ "pt-br", "es-es" ],
-          "type": "MT"
-        }
-      ]
-    }
-  ],
   "includeDependencies": true,
   "autoPush": true,
   "xliffVersion": "1.2",
-  "translationType": "MT" 
+  "translationType": "MT",
+  "locales": [ "pt-br" ],
+  "files": [ "**/*.md", "**/*.yml" ]
 }
