@@ -38,6 +38,8 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Web App 
 > 1. Make sure **Implict flow** is **checked**
 > 1. Click *Save*
 
+> [!div renderon="portal" id="makechanges"]
+
 ## Step 3: Configure your Visual Studio project
 
 1. Copy the value for **Application ID** to the clipboard
