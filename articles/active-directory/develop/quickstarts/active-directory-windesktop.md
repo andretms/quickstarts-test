@@ -30,15 +30,13 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 > 
 > 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
 > 1. Enter a name for your application and click **Create**
-> 1. Follow the instructions to configure your application
+> 1. Follow the instructions to configure your application and add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs.
 
 > [!div renderon="portal"]
 > ## Step 1: Configure your application
 > >[!div renderon="portal" id="makechanges"]
 > This will make the following:
-> 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
-> 1. Enter a name for your application and click **Create**
-> 1. Click *Save*
+> - Add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs
 
 ## Step 2: Download your web server or project
 
