@@ -50,8 +50,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 
 ## Step 3: Configure your JavaScript SPA
 
-1. Still in the Azure Portal, copy the value for **Application ID** to the clipboard
-2.	Edit `msalconfig.js` and replace <code>Enter_the_Application_Id_here</code> with the Application ID your application:
+Edit `msalconfig.js` and replace <code>Enter_the_Application_Id_here</code> with the Application ID your application:
 
     ```javascript
     var msalconfig = {

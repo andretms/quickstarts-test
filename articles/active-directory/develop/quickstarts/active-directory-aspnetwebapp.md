@@ -44,7 +44,6 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Web App 
 
 ## Step 3: Configure your Visual Studio project
 
-1. Copy the value for **Application ID** to the clipboard
 1. Open the project in Visual Studio
 1. Edit **Web.config** and replace `Enter_the_Application_Id_here` with the Application ID from the application you just registered:
 
