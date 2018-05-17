@@ -25,17 +25,15 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 
 > [!div class="sxs-lookup" renderon="portal"]
 > ## Step 1: Configure your application in Azure Portal
+> For the code sample for this quickstart to work, you need to add a reply URL as *http://localhost:30662/*.
 > >[!div renderon="portal" id="makechanges"]
-> This will make the following:
-> 1. Add a reply URL correspond to the application's URL based on your web server
-> 2. Enable **Implict flow**
 
 > [!div renderon="docs"]
 > ## Step 1: Register your application
 > 
 > 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
 > 2. Enter a name for your application and click **Create**
-> 3. Follow the instructions to add a reply URL to your app and enable **Implict flow**
+> 3. Follow the instructions to add a reply URL to your app and configure your code sample
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http://localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://localhost:30662/*, run the following command line:

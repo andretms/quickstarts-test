@@ -34,9 +34,8 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 
 > [!div renderon="portal"]
 > ## Step 1: Configure your application
+> For the code sample for this quickstart to work, you need to add a reply URL as **urn:ietf:wg:oauth:2.0:oob**.
 > >[!div renderon="portal" id="makechanges"]
-> This will make the following:
-> - Add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs
 
 ## Step 2: Download your web server or project
 
