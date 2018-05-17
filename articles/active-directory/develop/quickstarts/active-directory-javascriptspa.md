@@ -50,12 +50,12 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 
 Edit `msalconfig.js` and replace <code>Enter_the_Application_Id_here</code> with the Application ID your application:
 
-    ```javascript
-    var msalconfig = {
-        clientID: "Enter_the_Application_Id_here",
-        redirectUri: location.origin
-    };
-    ```
+```javascript
+var msalconfig = {
+    clientID: "Enter_the_Application_Id_here",
+    redirectUri: location.origin
+};
+```
 
 ## More Information
 
@@ -134,7 +134,12 @@ Try out the JavaScript tutorials for a complete step-by-step guide on building a
 ### Learn the steps to create the application for this Quickstart
 
 > [!div class="nextstepaction"]
-> [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa)
+> [Call Graph API tutorial](../tutorials/active-directory-javascriptspa-call-graph-api.md)
+
+### Learn from tutorials for additional scenarios
+
+> [!div class="nextstepaction"]
+> [Call a custom Web API tutorial](../tutorials/active-directory-javascriptspa-call-api.md)
 
 <!--
 ### Learn other scenarios
