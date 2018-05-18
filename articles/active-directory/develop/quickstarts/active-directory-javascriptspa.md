@@ -27,7 +27,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > ## Step 1: Configure your application in Azure Portal
 > For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
-> > [Make these changes for me]
+> > [Make these changes for me]()
 
 > [!div renderon="docs"]
 > ## Step 1: Register your application

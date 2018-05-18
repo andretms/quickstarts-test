@@ -36,7 +36,7 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Web App 
 > ## Step 1: Configure your application
 > For the code sample for this quickstart to work, you need to add a reply URL to *https:<span/>//localhost:44368/* as redirect URL and enable *Implict flow*
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
-> > [Make these changes for me]
+> > [Make these changes for me]()
 
 
 ## Step 2: Download your web server or project
