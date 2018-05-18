@@ -25,8 +25,9 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 
 > [!div class="sxs-lookup" renderon="portal"]
 > ## Step 1: Configure your application in Azure Portal
-> For the code sample for this quickstart to work, you need to add a reply URL as *http://localhost:30662/*.
-> >[!div renderon="portal" id="makechanges"]
+> For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
+> > [!div renderon="portal" id="makechanges" class="nextstepaction"]
+> > Make these change for me
 
 > [!div renderon="docs"]
 > ## Step 1: Register your application
@@ -36,7 +37,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > 3. Follow the instructions to add a reply URL to your app and configure your code sample
 
 > [!NOTE]
-> If you use Visual Studio, the Redirect URL will be set to to *http://localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://localhost:30662/*, run the following command line:
+> If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://<span/>localhost:30662/*, run the following command line:
 >> ```bash
 >> python -m http.server 30662
 >> ```
@@ -60,6 +61,7 @@ var msalconfig = {
 ## More Information
 
 ### *msal.js*
+
 MSAL is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory. The Quickstart's *index.html* contains reference to the library:
 
 ```html
