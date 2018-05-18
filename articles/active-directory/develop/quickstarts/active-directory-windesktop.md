@@ -32,7 +32,7 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 > 1. Enter a name for your application and click **Create**
 > 1. Follow the instructions to configure your application and add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs.
 
-> [!div renderon="portal"]
+> [!div renderon="portal" class="sxs-lookup"]
 > ## Step 1: Configure your application
 > For the code sample for this quickstart to work, you need to add a reply URL as **urn:ietf:wg:oauth:2.0:oob**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
