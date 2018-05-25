@@ -19,7 +19,7 @@ ms.custom: aaddev
 
 ---
 
-# Call the Microsoft Graph API from a iOS app
+# Call the Microsoft Graph API from an iOS native app
 
 This quickstart contains a code sample that demonstrates how a native iOS application can sign in personal, work and school accounts, get an access token, and call the Microsoft Graph API.
 
