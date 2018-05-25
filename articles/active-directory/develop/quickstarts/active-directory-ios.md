@@ -74,9 +74,9 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 
 Below an overview of this Quickstart:
 
-### MSAL.NET
+### MSAL
 
-MSAL ([MSAL.framework](https://github.com/AzureAD/microsoft-authentication-library-for-objc)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory. You can use carthage to install it by first running the following command in bash terminal from App’s root folder to build MSAL framework:
+MSAL ([MSAL.framework](https://github.com/AzureAD/microsoft-authentication-library-for-objc)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory. You can use carthage to install it by first running the following command in bash terminal from App’s root folder to build MSAL:
 
 ```bash
 echo "github \"AzureAD/microsoft-authentication-library-for-objc\" \"master\"" > Cartfile
