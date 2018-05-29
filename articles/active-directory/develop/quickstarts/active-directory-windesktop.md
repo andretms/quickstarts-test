@@ -37,6 +37,9 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 > For the code sample for this quickstart to work, you need to add a reply URL as **urn:ietf:wg:oauth:2.0:oob**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
+>
+> > [!div id="appconfigured" class="hidden"]
+> > Your application is already configured with these attributes
 
 ## Step 2: Download your web server or project
 

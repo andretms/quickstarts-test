@@ -35,8 +35,9 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 > [!div renderon="portal" class="sxs-lookup"]
 > ## Step 1: Configure your application
 > For the code sample for this quickstart to work, you need to add a reply URL as **msal{AppId}://auth** (where l{AppId} is this application Id).
-> > [!div renderon="portal" id="makechanges" class="nextstepaction"]
-> > [Make this change for me]()
+>
+> > [!div id="appconfigured" class="hidden"]
+> > Your application is already configured with these attributes
 
 ## Step 2: Download your web server or project
 

@@ -28,6 +28,9 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
+>
+> > [!div id="appconfigured" class="hidden"]
+> > Your application is already configured with these attributes
 
 > [!div renderon="docs"]
 > ## Step 1: Register your application
