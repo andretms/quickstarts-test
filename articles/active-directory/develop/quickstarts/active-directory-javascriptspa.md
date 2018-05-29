@@ -30,7 +30,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > Your application is already configured with these attributes
+> > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is already configured with these attributes
 
 > [!div renderon="docs"]
 > ## Step 1: Register your application
