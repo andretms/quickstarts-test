@@ -28,7 +28,7 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 > [!div renderon="docs"]
 > ## Download and register your application
 > 
-> 1. Go to the [Azure AD - Application Registration [PPE]](https://df.onecloud.azure-test.net/signin/index/?sessionId=TestTraffic&trace=debugLog&feature.canmodifyextensions=true&feature.DisableExtensions=true&HubsExtension=true&feature.canmodifystamps=true&Microsoft_AAD_RegisteredApps=867370#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/WinDesktopQuickstartPage/sourceType/docs)
+> 1. Go to the [Azure Portal - Application Registration [PPE]](https://df.onecloud.azure-test.net/signin/index/?sessionId=TestTraffic&trace=debugLog&feature.canmodifyextensions=true&feature.DisableExtensions=true&HubsExtension=true&feature.canmodifystamps=true&Microsoft_AAD_RegisteredApps=867370#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/WinDesktopQuickstartPage/sourceType/docs)
 > 1. Enter a name for your application and click **Create**
 > 1. Follow the instructions to download and configure your application and to add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs.
 
@@ -49,17 +49,9 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 >
 > 1. Open the project in Visual Studio
 > 1. Edit **App.Xaml.cs** and replace the line starting with `private static string ClientId` with:
-```csharp
-private static string ClientId = "Enter_the_Application_Id_here";
-```
-
-> [!div renderon="docs"]
-> 1. Open the project in Visual Studio
-> 1. Edit **App.Xaml.cs** and replace <code>Enter_the_Application_Id_here</code> with the Application ID from the application you just registered:
-
-```csharp
-private static string ClientId = "Enter_the_Application_Id_here";
-```
+>	```csharp
+>	private static string ClientId = "Enter_the_Application_Id_here";
+>	```
 
 ## More Information
 
