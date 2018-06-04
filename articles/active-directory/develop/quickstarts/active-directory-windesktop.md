@@ -28,7 +28,7 @@ This quickstart contains a code sample that demonstrates how a Windows Desktop .
 > [!div renderon="docs"]
 > ## Register your application and download your Quickstart app
 >
-> 1. Go to the [Azure Portal - Application Registration [PPE]](https://df.onecloud.azure-test.net/signin/index/?sessionId=TestTraffic&trace=debugLog&feature.canmodifyextensions=true&feature.DisableExtensions=true&HubsExtension=true&feature.canmodifystamps=true&Microsoft_AAD_RegisteredApps=867370#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/WinDesktopQuickstartPage/sourceType/docs)
+> 1. Go to the [Azure Portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/AspNetWebAppQuickstartPage/sourceType/docs)
 > 1. Enter a name for your application and click **Create**
 > 1. Follow the instructions to download and configure your new application, and to add **urn:ietf:wg:oauth:2.0:oob** in the list of redirect URLs automatically for you.
 

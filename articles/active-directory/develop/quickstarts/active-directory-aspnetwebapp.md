@@ -28,9 +28,9 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Web App 
 > [!div renderon="docs"]
 > ## Step 1: Register your application in Azure portal
 > 
-> 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
+> 1. To register an application, go to the [Azure AD - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/AspNetWebAppQuickstartPage/sourceType/docs)
 > 1. Enter a name for your application and click **Create**
-> 1. Follow the steps to add *https:<span/>//localhost:44368/* as redirect URL and enable *Implict flow*
+> 1. Follow the steps to add *https:<span/>//localhost:44368/* as redirect URL
 
 > [!div class="sxs-lookup" renderon="portal"]
 > ## Step 1: Configure your application
