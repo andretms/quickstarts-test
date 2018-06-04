@@ -39,7 +39,7 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Web App 
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is already configured with these attributes
+> > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
 
 ## Step 2: Download your web server or project
 
