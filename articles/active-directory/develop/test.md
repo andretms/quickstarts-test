@@ -45,8 +45,9 @@ You have two options to start your Quickstart application:
 1. Select **Authentication** menu and set **ID tokens** under *Implict Grant* and select 'Save'
 
 ::: zone-end
+
 <!-->
-::: zone render="chromeless"
+zone render="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
 
@@ -58,7 +59,7 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
 
 <br />
-::: zone-end
+zone-end
 <!-->
 
 > [!NOTE]
