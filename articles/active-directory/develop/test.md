@@ -34,8 +34,8 @@ You have two options to start your Quickstart application:
 1. Go to the [Azure Portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs)
 1. Enter a name for your application and click **Register**
 1. Follow the instructions to download and configure your new application, adding **http<span/>://localhost:30662/** as Redirect URL and setting the **Implict Flow** automatically for you.
-<br/>
 
+<br/>
 
 ::: zone-end
 
