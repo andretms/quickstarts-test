@@ -44,9 +44,8 @@ You have two options to start your Quickstart application:
 1. Enter a name for your application, add **http<span/>://localhost:30662/** in Reply URL, and click **Register**
 1. Select **Authentication** menu and set **ID tokens** under *Implict Grant* and select 'Save'
 
-
 ::: zone-end
-
+<!-->
 ::: zone render="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
@@ -60,6 +59,7 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 
 <br />
 ::: zone-end
+<!-->
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://<span/>localhost:30662/*, run the following command line:
