@@ -26,14 +26,18 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 ::: zone render="docs"
 
 ## Register your application and download your Quickstart app
+
 You have two options to start your Quickstart application:
+
 ### Option 1: Register your application and download your Quickstart app [Express]
 
 1. Go to the [Azure Portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs)
 1. Enter a name for your application and click **Register**
 1. Follow the instructions to download and configure your new application, adding **http<span/>://localhost:30662/** as Redirect URL and setting the **Implict Flow** automatically for you.
- 
+
+
 ### Option 2: Register your application and configure sample [Manual]
+
 #### Step 1: Register your application
  
 1. To register an application, go to the [Azure Portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**
@@ -45,6 +49,7 @@ You have two options to start your Quickstart application:
 ::: zone render="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
+
 For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
 > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > [Make these changes for me]()
