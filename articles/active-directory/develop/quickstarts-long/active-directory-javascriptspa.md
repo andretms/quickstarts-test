@@ -66,7 +66,7 @@ A local web server such as [Python http.server](https://www.python.org/downloads
 
 Instructions in this guide are based on both Python and Visual Studio 2017, but feel free to use any other development environment or Web Server.
 
-## Create your project 
+## Create your project
 
 > ### Option 1: Visual Studio 
 > If you are using Visual Studio and are creating a new project, follow the steps below to create a new Visual Studio solution:

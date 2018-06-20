@@ -1,9 +1,11 @@
 # [Index](index.md)
 # Quickstarts
+## [Android](articles/active-directory/develop/quickstarts/active-directory-android.md)
+## [ASP.NET Web App](articles/active-directory/develop/quickstarts/active-directory-aspnetwebapp.md)
+## [ASP.NET Core Web App](articles/active-directory/develop/quickstarts/active-directory-aspnetcorewebapp.md)
+## [iOS](articles/active-directory/develop/quickstarts/active-directory-ios.md)
 ## [JavaScript](articles/active-directory/develop/quickstarts/active-directory-javascriptspa.md)
 ## [Windows Desktop (XAML)](articles/active-directory/develop/quickstarts/active-directory-windesktop.md)
-## [ASP.NET](articles/active-directory/develop/quickstarts/active-directory-aspnetwebapp.md)
-## [iOS](articles/active-directory/develop/quickstarts/active-directory-ios.md)
 
 # Tutorials
 ## JavaScript

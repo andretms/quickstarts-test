@@ -19,7 +19,7 @@ ms.custom: aaddev
 
 ---
 
-# Call the Microsoft Graph API from an iOS native app
+# Sign in users and call the Microsoft Graph API from an iOS native app
 
 This quickstart contains a code sample that demonstrates how a native iOS application can sign in personal, work and school accounts, get an access token, and call the Microsoft Graph API.
 
@@ -158,6 +158,6 @@ Try out the iOS tutorial for a complete step-by-step guide on building applicati
 ### Learn the steps to create the application used in this Quickstart
 
 > [!div class="nextstepaction"]
-> [Call Graph API iOS tutorial](https://docs.microsoft.com/en-us/azure/active-directory/develop/guidedsetups/active-directory-ios)
+> [Call Graph API iOS tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-ios)
 
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
