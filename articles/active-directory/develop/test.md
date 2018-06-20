@@ -35,7 +35,7 @@ You have two options to start your Quickstart application:
 1. Enter a name for your application and click **Register**
 1. Follow the instructions to download and configure your new application, adding **http<span/>://localhost:30662/** as Redirect URL and setting the **Implict Flow** automatically for you.
 
-<br/>
+<div/>
 
 ::: zone-end
 
