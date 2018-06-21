@@ -11,7 +11,7 @@ ms.service: active-directory
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
-ms.workload: identity�
+ms.workload: identity 
 ms.date: 05/09/2018
 ms.author: andret
 
@@ -35,10 +35,6 @@ You have two options to start your Quickstart application:
 1. Enter a name for your application and click **Register**
 1. Follow the instructions to download and configure your new application, adding **http<span/>://localhost:30662/** as Redirect URL and setting the **Implict Flow** automatically for you.
 
-<div/>
-
-::: zone-end
-
 ### Option 2: Register your application and configure sample [Manual]
 
 #### Step 1: Register your application
@@ -47,11 +43,13 @@ You have two options to start your Quickstart application:
 1. Enter a name for your application, add **http<span/>://localhost:30662/** in Reply URL, and click **Register**
 1. Select **Authentication** menu and set **ID tokens** under *Implict Grant* and select 'Save'
 
-<!-->
-zone render="chromeless"
+<div/>
+
+::: zone-end
+
+::: zone render="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
-
 For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
 > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > [Make these changes for me]()
@@ -59,9 +57,9 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 > [!div id="appconfigured" class="hidden"]
 > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
 
-<br />
-zone-end
-<!-->
+<div/>
+
+::: zone-end
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://<span/>localhost:30662/*, run the following command line:
@@ -149,7 +147,7 @@ userAgentApplication.acquireTokenSilent(graphAPIScopes)
 
 #### Getting a user token interactively
 
- There are situations however that you need to force users interact with Azure Active Directory v2 endpoint � some examples include:
+ There are situations however that you need to force users interact with Azure Active Directory v2 endpoint – some examples include:
 - Users may need to reenter their credentials because the password has expired
 - Your application is requesting access to a resource that the user needs to consent to
 - Two factor authentication is required
