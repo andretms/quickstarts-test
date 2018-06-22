@@ -97,24 +97,24 @@ Msal has two methods used acquire tokens - `AcquireTokenAsync` and `AcquireToken
 - Two factor authentication is required
 
 ```csharp
-authResult = await App.PublicClientApp.AcquireTokenAsync(_scopes);
+authResult = await App.PublicClientApp.AcquireTokenAsync(scopes);
 ```
 
 > |Where:||
 > |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> |scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
 
 #### Getting a user token silently
 
 You don't want to require user to validate their credentials every time they need to access a resource - most of the time you want token acquisitions and renewal without any user interaction - `AcquireTokenSilentAsync` is the method commonly used to obtain tokens used to access protected resources after the initial `AcquireTokenAsync`:
 
 ```csharp
-authResult = await App.PublicClientApp.AcquireTokenSilentAsync(_scopes, App.PublicClientApp.Users.FirstOrDefault());
+authResult = await App.PublicClientApp.AcquireTokenSilentAsync(scopes, App.PublicClientApp.Users.FirstOrDefault());
 ```
 
 > |Where: ||
 > |---------|---------|
-> |_scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> |scopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
  |App.PublicClientApp.Users.FirstOrDefault() | The first user in the cache (MSAL support multiple users in a single app) |
 
 ## What is next
