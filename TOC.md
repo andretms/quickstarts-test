@@ -6,6 +6,7 @@
 ## [iOS](articles/active-directory/develop/quickstarts/active-directory-ios.md)
 ## [JavaScript](articles/active-directory/develop/quickstarts/active-directory-javascriptspa.md)
 ## [Windows Desktop (XAML)](articles/active-directory/develop/quickstarts/active-directory-windesktop.md)
+## [Windows - UWP](articles/active-directory/develop/quickstarts/active-directory-uwp.md)
 
 # Tutorials
 ## JavaScript
