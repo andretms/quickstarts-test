@@ -41,7 +41,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 
 > [!div class="sxs-lookup" renderon="portal"]
 > ### Step 1: Configure your application in Azure Portal
-> For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
+> For the code sample for this quickstart to work, you need to add a reply URL as **http<span/>://localhost:30662/** and enable **Implict Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
