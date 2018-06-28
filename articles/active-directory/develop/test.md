@@ -45,6 +45,7 @@ You have two options to start your Quickstart application:
 
 ::: zone-end
 
+<!--
 ::: zone render="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
@@ -56,6 +57,7 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
 
 ::: zone-end
+-->
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://<span/>localhost:30662/*, run the following command line:
