@@ -42,6 +42,13 @@ ms.author: andret
     var userAgentApplication = new Msal.UserAgentApplication(msalconfig.clientID, null, loginCallback, {
         redirectUri: msalconfig.redirectUri
     });
+    var userAgentApplication = new Msal.UserAgentApplication(msalconfig.clientID, null, loginCallback, {
+        redirectUri: msalconfig.redirectUri
+    });
+
+    var userAgentApplication = new Msal.UserAgentApplication(msalconfig.clientID, null, loginCallback, {
+        redirectUri: msalconfig.redirectUri
+    });
     ```
 
 This quickstart contains a code sample that demonstrates how a JavaScript Single Page Application (SPA) can sign in personal, work and school accounts, get an access token, and call the Microsoft Graph API.
