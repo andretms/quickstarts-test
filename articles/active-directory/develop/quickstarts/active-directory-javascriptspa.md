@@ -139,6 +139,8 @@ userAgentApplication.acquireTokenSilent(graphAPIScopes)
 - Your application is requesting access to a resource that the user needs to consent to
 - Two factor authentication is required
 
+The usual recommended pattern for most applications is to call `acquireTokenSilent` first, then catch the exception and then call acquireTokenRedirect (or *acquireTokenPopup*) to start an interactive request.
+
 Calling the *acquireTokenRedirect(scope)* result in redirecting users to the Azure Active Directory v2 endpoint (or *acquireTokenPopup(scope)* result on a popup window) where users need to interact with by either confirming their credentials, giving the consent to the required resource, or completing the two factor authentication.
 
 ```javascript
