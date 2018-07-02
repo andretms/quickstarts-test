@@ -156,6 +156,7 @@ You have two options to start your Quickstart application:
 1. Enter a name for your application, add **http<span/>://localhost:30662/** in Reply URL, and click **Register**
 1. Select **Authentication** menu and set **ID tokens** under *Implict Grant* and select 'Save'
 <span/>
+&nbsp;
 
 ::: zone-end
 
