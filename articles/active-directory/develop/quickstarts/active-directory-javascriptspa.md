@@ -154,11 +154,4 @@ Try out the JavaScript tutorial for a complete step-by-step guide on how to buil
 > [!div class="nextstepaction"]
 > [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa)
 
-<!--
-### Learn other scenarios
-> [!div class="nextstepaction"]
-> [Sign-Out tutorial](..\tutorials\active-directory-javascriptspa-sign-out.md)
-> [Call Graph API tutorial](..\tutorials\active-directory-javascriptspa-call-graph-api.md)
--->
-
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
