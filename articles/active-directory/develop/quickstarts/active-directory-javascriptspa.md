@@ -147,17 +147,12 @@ userAgentApplication.acquireTokenRedirect(graphAPIScopes);
 
 ## What is next
 
-Try out the JavaScript tutorials for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart, and other tutorials, like call Microsoft Graph API, sign-out:
+Try out the JavaScript tutorial for a complete step-by-step guide on how to build the application for this Quickstart:
 
 ### Learn the steps to create the application for this Quickstart
 
 > [!div class="nextstepaction"]
-> [Call Graph API tutorial](../tutorials/active-directory-javascriptspa-call-graph-api.md)
-
-### Learn from tutorials for additional scenarios
-
-> [!div class="nextstepaction"]
-> [Call a custom Web API tutorial](../tutorials/active-directory-javascriptspa-call-api.md)
+> [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa)
 
 <!--
 ### Learn other scenarios

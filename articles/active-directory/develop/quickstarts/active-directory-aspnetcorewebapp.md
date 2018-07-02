@@ -52,7 +52,7 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Core Web
 1. Edit **appsettings.json** and replace add the Application ID from the application you just registered:
 
     ```json
-    "ClientId": "[Enter the Client Id (Application ID obtained from the Azure portal), e.g. ba74781c2-53c2-442a-97c2-3d60re42f403]"
+    "ClientId": "Enter_the_Application_Id_here"
     "TenantId": "common"
     ```
 
