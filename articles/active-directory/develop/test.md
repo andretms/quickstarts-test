@@ -139,7 +139,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 <span/>
 &nbsp;
 
-::: zone target="docs"
+::<span/>: zone target="docs"
 
 ## Register your application and download your Quickstart app
 
@@ -161,10 +161,10 @@ You have two options to start your Quickstart application:
 <span/>
 &nbsp;
 
-::: zone-end
+::<span/>: zone-end
 
 
-::: zone target="chromeless"
+::<span/>: zone target="chromeless"
 
 ### Step 1: Configure your application in Azure Portal
 For the code sample for this quickstart to work, you need to add a reply URL as *http<span/>://localhost:30662/*.
@@ -177,7 +177,7 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 <span/>
 &nbsp;
 
-::: zone-end
+::<span/>: zone-end
 
 
 > [!NOTE]
