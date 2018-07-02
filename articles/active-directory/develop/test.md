@@ -169,7 +169,9 @@ For the code sample for this quickstart to work, you need to add a reply URL as 
 
 > [!div id="appconfigured" class="hidden"]
 > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
+
 <span/>
+&nbsp;
 
 ::: zone-end
 
