@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 06/30/2018
+ms.date: 07/15/2018
 ms.author: andret
 ms.custom: aaddev 
 
