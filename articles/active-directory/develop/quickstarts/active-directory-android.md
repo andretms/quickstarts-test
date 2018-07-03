@@ -45,7 +45,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > > [Make this change for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
+> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
 ## Step 2: Download your web server or project
 

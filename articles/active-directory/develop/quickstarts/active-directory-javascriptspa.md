@@ -46,7 +46,7 @@ This quickstart contains a code sample that demonstrates how a JavaScript Single
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](media/active-directory-windesktop/checkmark.png) Your application is configured with these attributes
+> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set redirect URL to *http://<span/>localhost:30662/*, run the following command line:
