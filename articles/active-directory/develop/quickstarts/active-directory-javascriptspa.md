@@ -11,7 +11,7 @@ ms.service: active-directory
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
-ms.workload: identity 
+ms.workload: identityï¿½
 ms.date: 07/10/2018
 ms.author: andret
 
@@ -84,6 +84,12 @@ MSAL is the library used to sign in users and request tokens used to access an A
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.1/js/msal.min.js"></script>
 ````
 
+Alternatively, you can download it via npm:
+
+```batch
+npm install msal
+```
+
 ### MSAL initialization
 
 The quickstart code also shows how you how you initialize the library:
@@ -135,7 +141,7 @@ userAgentApplication.acquireTokenSilent(graphAPIScopes)
 
 #### Getting a user token interactively
 
- There are situations however that you need to force users interact with Azure Active Directory v2 endpoint – some examples include:
+ There are situations however that you need to force users interact with Azure Active Directory v2 endpoint ï¿½ some examples include:
 - Users may need to reenter their credentials because the password has expired
 - Your application is requesting access to a resource that the user needs to consent to
 - Two factor authentication is required
@@ -156,5 +162,11 @@ Try out the JavaScript tutorial for a complete step-by-step guide on how to buil
 
 > [!div class="nextstepaction"]
 > [Call Graph API tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-javascriptspa)
+
+### Browse MSAL repo, for documentation, FAQ, issues and more
+
+> [!div class="nextstepaction"]
+> [msal.js GitHub repo](https://github.com/AzureAD/microsoft-authentication-library-for-js)
+
 
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
