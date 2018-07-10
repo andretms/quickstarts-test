@@ -12,9 +12,11 @@ ms.component: develop
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
-ms.workload: identity�
+ms.workload: identity
 ms.date: 07/10/2018
 ms.author: andret
+ms.custom: aaddev
+
 #Customer intent: As an app developer, I want to learn how to get access tokens using the Azure AD v2.0 endpoint so that my JavaScript app can sign in personal and work and school accounts.
 ---
 
@@ -28,7 +30,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
 > * [Express] [Option 1: Register and then download your quickstart application](#option-1-register-your-application-and-download-your-quickstart-app)
-> * [Manual] [Option 2: Register your application and configure the sample](#option-2-register-your-application-and-configure-the-sample)
+> * [Manual] [Option 2: Register your application and configure the sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
 > ### Option 1: Register your application and download your quickstart app
 >
@@ -36,7 +38,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > 1. Enter a name for your application and click **Register**.
 > 1. Follow the instructions to download and automatically configure your new application for you in one click.
 > [!div renderon="docs"]
-> ### Option 2: Register your application and configure the sample
+> ### Option 2: Register and manually configure your application and code sample
 > #### Step 1: Register your application
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
