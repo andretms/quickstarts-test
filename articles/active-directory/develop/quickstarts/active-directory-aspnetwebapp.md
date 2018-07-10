@@ -1,6 +1,6 @@
 ---
 title: Azure AD v2 ASP.NET web server quickstart | Microsoft Docs
-description: Learn now to implement Microsoft Sign-In on an ASP.NET web app using OpenID Connect
+description: Learn how to implement Microsoft Sign-In on an ASP.NET web app using OpenID Connect
 services: active-directory
 documentationcenter: dev-center-name
 author: andretms
