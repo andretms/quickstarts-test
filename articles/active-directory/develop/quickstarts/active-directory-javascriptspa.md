@@ -56,9 +56,9 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 
 > [!NOTE]
 > If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set the redirect URL to `http://<span/>localhost:30662/`, run the following command line:
->> ```bash
->> python -m http.server 30662
->> ```
+> ```bash
+> python -m http.server 30662
+> ```
 
 ### Step 2: Download your web server or project
 
