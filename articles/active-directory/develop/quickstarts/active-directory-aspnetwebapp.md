@@ -29,7 +29,8 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
 > * [Express] [Option 1: Register and then download your quickstart application](#option-1-register-your-application-and-download-your-quickstart-app)
-> * [Manual] [Option 2: Register your application and configure the sample](#option-2-register-your-application-and-configure-the-sample)
+> * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
+>
 >
 > ### Option 1: Register your application and download your quickstart app
 >
@@ -52,11 +53,11 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with this attribute
 
-## Step 2: Download your web server or project
+### Step 2: Download your web server or project
 
 [Download the Visual Studio 2017 project](https://github.com/AzureADQuickStarts/AppModelv2-WebApp-OpenIDConnect-DotNet/archive/master.zip)
 
-## Step 3: Configure your Visual Studio project
+### Step 3: Configure your Visual Studio project
 
 1. Open the project in Visual Studio
 1. Edit **Web.config** and replace `Enter_the_Application_Id_here` with the Application ID from the application you just registered:
