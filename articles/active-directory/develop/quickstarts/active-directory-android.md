@@ -1,6 +1,6 @@
 ---
 title: Azure AD v2 Android quickstart | Microsoft Docs
-description: Learn how Android native applications can call an API that require access tokens by Azure Active Directory v2.0 endpoint
+description: Learn how Android native applications can call an API that requires access tokens by Azure Active Directory v2.0 endpoint.
 services: active-directory
 documentationcenter: dev-center-name
 author: andretms
@@ -9,6 +9,7 @@ editor: ''
 
 ms.assetid: 820acdb7-d316-4c3b-8de9-79df48ba3b06
 ms.service: active-directory
+ms.component: develop
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -16,10 +17,10 @@ ms.workload: identity
 ms.date: 07/20/2018
 ms.author: andret
 ms.custom: aaddev 
-
+#Customer intent: As an application developer, I want to learn how Android native apps can call an API that requires access tokens by Azure AD v2.0 endpoint.
 ---
 
-# Sign in users and call the Microsoft Graph API from an Android app
+# Quickstart: Sign in users and call the Microsoft Graph API from an Android app
 
 This quickstart contains a code sample that demonstrates how a native Android application can sign in personal, work and school accounts, get an access token, and call the Microsoft Graph API.
 
@@ -29,7 +30,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > **Prerequisites**
 > * Android Studio
 > * Android SDK 21 or later is required (SDK 25 is recommended)
-> * An Android with Google Chrome or a web browser with support to Custom Tabs is required for this release of MSAL for Android
+> * An Android device with Google Chrome or a web browser with support for Custom Tabs is required for this release of MSAL for Android
 
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
@@ -47,15 +48,15 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > #### Step 1: Register your application
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
-> 1. Enter a name for your application, and click **Register**
-> 1. Select **Authentication** page, then add  add `msal{AppId}://auth` (where *{AppId}* is the application id from the application you just registered), select 'Installed client' under Type and then select **Save**
+> 1. Enter a name for your application and click **Register**.
+> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Installed client** under **Type**, and then select **Save**.
 >
 >> [!TIP]
->> To know the *Application Id*, go to Overview page.
+>> To know the *Application ID*, go to Overview page.
 
 > [!div renderon="portal" class="sxs-lookup"]
 > ### Step 1: Configure your application
-> For the code sample for this quickstart to work, you need to add a reply URL as **msal{AppId}://auth** (where l{AppId} is this application Id).
+> For the code sample for this quickstart to work, you need to add a reply URL as **msal{AppId}://auth** (where {AppId} is the application ID of your app).
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
 >
@@ -68,15 +69,15 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 
 #### Step 3: Configure your project
 
-1. Extract and open the Project in Android Studio
-1. Open **MainActivity** (under **app** > **java** > **<i>{host}.{namespace}</i>**)
-1. Replace the line starting with `final static String CLIENT_ID` with:
+1. Extract and open the project in Android Studio.
+1. Under **app** > **java** > **<i>{host}.{namespace}</i>**, open **MainActivity**.
+1. Replace the line starting with `final static String CLIENT_ID` with the following code:
 
     ```java
     final static String CLIENT_ID = "[Enter the application Id here]";
     ```
-1. Open: **app** > **manifests** > **AndroidManifest.xml**
-1. Add the following activity to **manifest\application** node. This register a **BrowserTabActivity** to allow the OS to resume your application after completing the authentication:
+1. Open: **app** > **manifests** > **AndroidManifest.xml**.
+1. Add the following activity to the **manifest\application** node. This code snippet registers a **BrowserTabActivity** to allow the OS to resume your application after completing the authentication:
 
     ```xml
     <!--Intent filter to capture System Browser calling back to our app after Sign In-->
@@ -99,11 +100,11 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 
 ## More Information
 
-Below an overview of this Quickstart:
+Read the following sections for more info about this quickstart.
 
 ### MSAL
 
-MSAL ([com.microsoft.identity.client](http://javadoc.io/doc/com.microsoft.identity.client/msal)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory. You can use carthage to install it by adding the following in **Gradle Scripts** > **build.gradle (Module: app)** under **Dependencies**:
+MSAL ([com.microsoft.identity.client](http://javadoc.io/doc/com.microsoft.identity.client/msal)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory (Azure AD). You can use carthage to install it by adding the following in **Gradle Scripts** > **build.gradle (Module: app)** under **Dependencies**:
 
 ```ruby  
 compile ('com.microsoft.identity.client:msal:0.1.+') {
@@ -112,15 +113,15 @@ compile ('com.microsoft.identity.client:msal:0.1.+') {
 compile 'com.android.volley:volley:1.0.0'
 ```
 
-### MSAL Initialization
+### MSAL initialization
 
-You can add the reference for MSAL by adding the line below:
+You can add the reference for MSAL by adding the following code:
 
 ```java
 import com.microsoft.identity.client.*;
 ```
 
-Then initialize MSAL using the line below:
+Then, initialize MSAL using the following code:
 
 ```java
 sampleApp = new PublicClientApplication(
@@ -130,20 +131,20 @@ sampleApp = new PublicClientApplication(
 
 > |Where: ||
 > |---------|---------|
-> |clientId | The Application Id from the application registered in *portal.microsoft.com* |
+> |`CLIENT_ID` | The Application ID from the application registered in *portal.microsoft.com* |
 
 ### Requesting tokens
 
-Msal has two methods used acquire tokens - `acquireToken` and `acquireTokenSilentAsync`:
+MSAL has two methods used acquire tokens: `acquireToken` and `acquireTokenSilentAsync`
 
 #### Getting a user token interactively
 
- Some situations require forcing users interact with Azure Active Directory v2 endpoint which will result a context switch to the system browser, to either validate users's credentials or for consent – some examples include:
+Some situations require forcing users to interact with Azure AD v2.0 endpoint, which results in a context switch to the system browser to either validate the users's credentials or for consent. Some examples include:
 
-* The first time users signs-in to the application
-* Users may need to reenter their credentials because the password has expired
-* Your application is requesting access to a resource that the user needs to consent to
-* Two factor authentication is required
+* The first time users sign in to the application
+* When users may need to reenter their credentials because the password has expired
+* When your application is requesting access to a resource that the user needs to consent to
+* When two factor authentication is required
 
 ```java
 sampleApp.acquireToken(this, SCOPES, getAuthInteractiveCallback());
@@ -151,12 +152,12 @@ sampleApp.acquireToken(this, SCOPES, getAuthInteractiveCallback());
 
 > |Where:||
 > |---------|---------|
-> |SCOPES | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
-> |getAuthInteractiveCallback | Callback executed when control is given back to the application after authentication |
+> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `getAuthInteractiveCallback` | Callback executed when control is given back to the application after authentication |
 
 #### Getting a user token silently
 
-You don't want to require user to validate their credentials every time they need to access a resource - most of the time you want token acquisitions and renewal without any user interaction - `AcquireTokenSilentAsync` is the method commonly used to obtain tokens used to access protected resources after the initial `acquireToken`:
+You don't want to require user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use `AcquireTokenSilentAsync` method to obtain tokens to access protected resources after the initial `acquireToken` method:
 
 ```java
 sampleApp.acquireToken(getActivity(), SCOPES, getAuthInteractiveCallback());
@@ -164,12 +165,12 @@ sampleApp.acquireToken(getActivity(), SCOPES, getAuthInteractiveCallback());
 
 > |Where:||
 > |---------|---------|
-> |SCOPES | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
-> |getAuthInteractiveCallback | Callback executed when control is given back to the application after authentication |
+> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `getAuthInteractiveCallback` | Callback executed when control is given back to the application after authentication |
 
-## What is next
+## Next steps
 
-Try out the Android tutorial for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart:
+Try out the Android tutorial for a complete step-by-step guide on building applications and new features, including a full explanation of this quickstart.
 
 ### Learn the steps to create the application used in this Quickstart
 
