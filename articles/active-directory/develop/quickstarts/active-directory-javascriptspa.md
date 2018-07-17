@@ -65,7 +65,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 #### Step 2: Download your web server or project
 
 * [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
-* [Download the core project files - for a local web server, such as Python](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
+* [Download the core project files - for a web server, such as Node.js](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
 
 #### Step 3: Configure your JavaScript SPA
 
