@@ -28,10 +28,10 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
-> * [Express] [Option 1: Register, auto configure your app and then download your code sample](#option-1-register-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
 > * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
-> ### Option 1: Register, auto configure your app and then download your code sample
+> ### Option 1: Register and auto configure your app and then download your code sample
 >
 > 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/AspNetWebAppQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.

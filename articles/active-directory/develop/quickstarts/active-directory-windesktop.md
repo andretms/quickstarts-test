@@ -47,7 +47,7 @@ In this quickstart, you'll learn a Windows Desktop .NET (WPF) application can si
 > 1. Enter a name for your application, add `urn:ietf:wg:oauth:2.0:oob` in **Reply URL**, and click **Register**.
 
 > [!div renderon="portal" class="sxs-lookup"]
-> ### Step 1: Configure your application
+> #### Step 1: Configure your application
 > For the code sample for this quickstart to work, you need to add a reply URL as **urn:ietf:wg:oauth:2.0:oob**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
@@ -55,11 +55,11 @@ In this quickstart, you'll learn a Windows Desktop .NET (WPF) application can si
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
-### Step 2: Download your Visual Studio project
+#### Step 2: Download your Visual Studio project
 
  [Download the Visual Studio 2017 project](https://github.com/Azure-Samples/active-directory-dotnet-desktop-msgraph-v2/archive/master.zip)
 
-### Step 3: Configure your Visual Studio project
+#### Step 3: Configure your Visual Studio project
 
  1. Open the project in Visual Studio
  1. Edit **App.Xaml.cs** and replace the line starting with `private static string ClientId` with the Application ID from the application you just registered:
