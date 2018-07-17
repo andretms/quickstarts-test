@@ -55,9 +55,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
 > [!NOTE]
-> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/)), Python or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port.
->
-> For Node.js, you can run the following from the project's directory to start listening on port 30662:
+> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/)), [Python http.server](https://www.python.org/downloads), [.NET Core](https://www.microsoft.com/net/core) or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port. For Node.js, you can run the following from the project's directory to start listening on port 30662:
 > ```batch
 > node server.js
 > ```
