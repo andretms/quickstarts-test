@@ -31,7 +31,6 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > * Android SDK 21 or later is required (SDK 25 is recommended)
 > * An Android with Google Chrome or a web browser with support to Custom Tabs is required for this release of MSAL for Android
 
-
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
@@ -49,7 +48,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application, and click **Register**
-> 1. Select **Authentication** page, then add  add ``msal{AppId}://auth` (where *{AppId}* is the application id from the application you just registered), select 'Installed client' under Type and then select **Save**
+> 1. Select **Authentication** page, then add  add `msal{AppId}://auth` (where *{AppId}* is the application id from the application you just registered), select 'Installed client' under Type and then select **Save**
 >
 >> [!TIP]
 >> To know the *Application Id*, go to Overview page.
