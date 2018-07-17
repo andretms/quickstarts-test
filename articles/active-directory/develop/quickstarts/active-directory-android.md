@@ -32,14 +32,13 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > * An Android with Google Chrome or a web browser with support to Custom Tabs is required for this release of MSAL for Android
 
 
-
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
-> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Express] [Option 1: Register, auto configure your app and then download your code sample](#option-1-register-auto-configure-your-app-and-then-download-your-code-sample)
 > * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
-> ### Option 1: Register and auto configure your app and then download your code sample
+> ### Option 1: Register, auto configure your app and then download your code sample
 >
 > 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/androidQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
@@ -56,7 +55,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 >> To know the *Application Id*, go to Overview page.
 
 > [!div renderon="portal" class="sxs-lookup"]
-> ## Step 1: Configure your application
+> ### Step 1: Configure your application
 > For the code sample for this quickstart to work, you need to add a reply URL as **msal{AppId}://auth** (where l{AppId} is this application Id).
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
@@ -64,11 +63,11 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
-## Step 2: Download your web server or project
+#### Step 2: Download your web server or project
 
 * [Download the Android Studio Project](https://github.com/Azure-Samples/active-directory-android-native-v2/archive/master.zip)
 
-## Step 3: Configure your project
+#### Step 3: Configure your project
 
 1. Extract and open the Project in Android Studio
 1. Open **MainActivity** (under **app** > **java** > **<i>{host}.{namespace}</i>**)

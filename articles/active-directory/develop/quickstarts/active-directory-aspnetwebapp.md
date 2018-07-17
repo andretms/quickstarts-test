@@ -28,11 +28,10 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
-> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Express] [Option 1: Register, auto configure your app and then download your code sample](#option-1-register-auto-configure-your-app-and-then-download-your-code-sample)
 > * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
->
-> ### Option 1: Register and auto configure your app and then download your code sample
+> ### Option 1: Register, auto configure your app and then download your code sample
 >
 > 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/AspNetWebAppQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
@@ -46,7 +45,7 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 
 
 > [!div class="sxs-lookup" renderon="portal"]
-> ### Step 1: Configure your application in Azure portal
+> #### Step 1: Configure your application in Azure portal
 > For the code sample for this quickstart to work, you need to add a reply URL as `http<span/>://localhost:44368/`.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
@@ -54,11 +53,11 @@ In this quickstart, you'll learn how a ASP.NET Web App can sign in personal acco
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with this attribute
 
-### Step 2: Download your web server or project
+#### Step 2: Download your web server or project
 
 [Download the Visual Studio 2017 project](https://github.com/AzureADQuickStarts/AppModelv2-WebApp-OpenIDConnect-DotNet/archive/master.zip)
 
-### Step 3: Configure your Visual Studio project
+#### Step 3: Configure your Visual Studio project
 
 1. Open the project in Visual Studio
 1. Edit **Web.config** and replace `Enter_the_Application_Id_here` with the Application ID from the application you just registered:

@@ -29,10 +29,10 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
-> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Express] [Option 1: Register, auto configure your app and then download your code sample](#option-1-register-auto-configure-your-app-and-then-download-your-code-sample)
 > * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
-> ### Option 1: Register and auto configure your app and then download your code sample
+> ### Option 1: Register, auto configure your app and then download your code sample
 >
 > 1. Go to the [Azure portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
@@ -46,7 +46,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
 > [!div class="sxs-lookup" renderon="portal"]
-> ### Step 1: Configure your application in Azure portal
+> #### Step 1: Configure your application in Azure portal
 > For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:30662/` and enable **Implicit Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
@@ -62,12 +62,12 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > node server.js
 > ```
 
-### Step 2: Download your web server or project
+#### Step 2: Download your web server or project
 
 * [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
 * [Download the core project files - for a local web server, such as Python](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
 
-### Step 3: Configure your JavaScript SPA
+#### Step 3: Configure your JavaScript SPA
 
 > [!div renderon="docs"]
 > Edit `msalconfig.js` and replace `Enter_the_Application_Id_here` with the Application ID your application:
