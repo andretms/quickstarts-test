@@ -1,6 +1,6 @@
 ---
-title: Azure AD v2 Android Quickstart | Microsoft Docs
-description: Sign-in users and query Microsoft Graph in an Android native application
+title: Azure AD v2 Android quickstart | Microsoft Docs
+description: Learn how Android native applications can call an API that require access tokens by Azure Active Directory v2.0 endpoint
 services: active-directory
 documentationcenter: dev-center-name
 author: andretms
@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 07/15/2018
+ms.date: 07/20/2018
 ms.author: andret
 ms.custom: aaddev 
 
@@ -27,16 +27,33 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 
 > [!NOTE]
 > **Prerequisites**
-> * Android Studio 
-> * Android SDK 21 or later is required (SDK 25 is recommended).
-> * An Android with Google Chrome or a web browser with support to Custom Tabs is required for this release of MSAL for Android.
+> * Android Studio
+> * Android SDK 21 or later is required (SDK 25 is recommended)
+> * An Android with Google Chrome or a web browser with support to Custom Tabs is required for this release of MSAL for Android
+
+
 
 > [!div renderon="docs"]
-> ## Step 1: Register your application
+> ## Register your application and download your quickstart app
+> You have two options to start your quickstart application:
+> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
+>
+> ### Option 1: Register and auto configure your app and then download your code sample
+>
+> 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/androidQuickstartPage/sourceType/docs).
+> 1. Enter a name for your application and click **Register**.
+> 1. Follow the instructions to download and automatically configure your new application for you in one click.
+> [!div renderon="docs"]
+> ### Option 2: Register and manually configure your application and code sample
+> #### Step 1: Register your application
 > 
-> 1. To register an application, go to the [Azure AD - Application Registration](https://apps.dev.microsoft.com/portal/register-app)
-> 1. Enter a name for your application and click **Create**
-> 1. Follow the instructions to configure your application and add **msal{AppId}://auth** in the list of redirect URLs.
+> 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
+> 1. Enter a name for your application, and click **Register**
+> 1. Select **Authentication** page, then add  add ``msal{AppId}://auth` (where *{AppId}* is the application id from the application you just registered), select 'Installed client' under Type and then select **Save**
+>
+>> [!TIP]
+>> To know the *Application Id*, go to Overview page.
 
 > [!div renderon="portal" class="sxs-lookup"]
 > ## Step 1: Configure your application
@@ -49,7 +66,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 
 ## Step 2: Download your web server or project
 
-- [Download the Android Studio Project](https://github.com/Azure-Samples/active-directory-android-native-v2/archive/master.zip)
+* [Download the Android Studio Project](https://github.com/Azure-Samples/active-directory-android-native-v2/archive/master.zip)
 
 ## Step 3: Configure your project
 
@@ -74,11 +91,13 @@ This quickstart contains a code sample that demonstrates how a native Android ap
     
             <!--Add in your scheme/host from registered redirect URI-->
             <!--By default, the scheme should be similar to 'msal[appId]' -->
-            <data android:scheme="msal[Enter the application Id here]"
+            <data android:scheme="msalEnter_the_Application_Id_here"
                 android:host="auth" />
         </intent-filter>
     </activity>
     ```
+> [!div renderon="docs"]
+> 6. Replace `Enter_the_Application_Id_here` with the Application ID your application
 
 ## More Information
 

@@ -47,17 +47,16 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 
 > [!div class="sxs-lookup" renderon="portal"]
 > ### Step 1: Configure your application in Azure portal
-> For the code sample for this quickstart to work, you need to add a reply URL as `http<span/>://localhost:30662/` and enable **Implicit Grant**.
+> For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:30662/` and enable **Implicit Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
-<br />
-
 > [!NOTE]
-> If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Node.js (download [here](https://nodejs.org/en/download/)), Python or any other web server, set the redirect URL to `http://<span/>localhost:30662/` and then configure the server to start listening this port. 
+> If you use Visual Studio 2017 (download [here](https://visualstudio.microsoft.com/downloads/)), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use Node.js (download [here](https://nodejs.org/en/download/)), Python or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port. 
+>
 > For Node.js, you can run the following from the project's directory to start listening on port 30662:
 > ```batch
 > node server.js
