@@ -55,7 +55,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
 > [!NOTE]
-> If you use Visual Studio 2017 (download [here](https://visualstudio.microsoft.com/downloads/)), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use Node.js (download [here](https://nodejs.org/en/download/)), Python or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port. 
+> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/)), Python or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port.
 >
 > For Node.js, you can run the following from the project's directory to start listening on port 30662:
 > ```batch
@@ -92,7 +92,7 @@ MSAL is the library used to sign in users and request tokens used to access an A
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.1/js/msal.min.js"></script>
 ````
 
-Alternatively, you can download it through npm:
+Alternatively, if you have Node installed, you can download it through npm:
 
 ```batch
 npm install msal
