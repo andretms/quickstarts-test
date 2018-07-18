@@ -172,7 +172,7 @@ sampleApp.acquireToken(getActivity(), SCOPES, getAuthInteractiveCallback());
 
 Try out the Android tutorial for a complete step-by-step guide on building applications and new features, including a full explanation of this quickstart.
 
-### Learn the steps to create the application used in this Quickstart
+### Learn the steps to create the application used in this quickstart
 
 > [!div class="nextstepaction"]
 > [Call Graph API Android tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-android)
