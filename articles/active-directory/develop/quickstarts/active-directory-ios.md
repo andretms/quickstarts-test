@@ -1,6 +1,6 @@
 ---
 title: Azure AD v2 iOS quickstart | Microsoft Docs
-description: Learn how to sign-in users and query Microsoft Graph in an iOS native application
+description: Learn how to sign-in users and query Microsoft Graph in an iOS native application.
 services: active-directory
 documentationcenter: dev-center-name
 author: andretms
@@ -9,6 +9,7 @@ editor: ''
 
 ms.assetid: 820acdb7-d316-4c3b-8de9-79df48ba3b06
 ms.service: active-directory
+ms.component: develop
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
@@ -16,10 +17,10 @@ ms.workload: identity
 ms.date: 07/18/2018
 ms.author: andret
 ms.custom: aaddev 
-
+#Customer intent: As an application developer, I want to learn how to sign in users and call Microsoft Graph from my iOS application.
 ---
 
-# Sign in users and call the Microsoft Graph API from an iOS native app
+# Quickstart: Sign in users and call the Microsoft Graph API from an iOS native app
 
 This quickstart contains a code sample that demonstrates how a native iOS application can sign in personal, work and school accounts, get an access token, and call the Microsoft Graph API.
 
@@ -42,11 +43,11 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 > #### Step 1: Register your application
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
-> 1. Enter a name for your application, and click **Register**
-> 1. Select **Authentication** page, then add  add `msal{AppId}://auth` (where *{AppId}* is the application id from the application you just registered), select 'Installed client' under Type and then select **Save**
+> 1. Enter a name for your application and click **Register**.
+> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Installed client** under **Type**, and then select **Save**.
 >
 >> [!TIP]
->> To know the *Application Id*, go to Overview page.
+>> To know the *Application ID*, go to Overview page.
 
 > [!div renderon="portal" class="sxs-lookup"]
 > ### Step 1: Configure your application
@@ -63,14 +64,14 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 
 ## Step 3: Configure your project
 
-1. Extract the zip file and open the project in XCode
-1. Edit **ViewController.swift** and replace replace the line starting with 'let kClientID' with:
+1. Extract the zip file and open the project in XCode.
+1. Edit **ViewController.swift** and replace the line starting with 'let kClientID' with the following code snippet:
 
     ```csharp
     private static string ClientId = "Enter_the_Application_Id_here";
     ```
-1. Control+click **Info.plist** to bring up the contextual menu, and then click: **Open As** > **Source Code**
-1. Under the dict root node, add the following:
+1. Press Control + click **Info.plist** to bring up the contextual menu, and then select **Open As** > **Source Code**.
+1. Under the dict root node, add the following code:
 
     ```xml
     <key>CFBundleURLTypes</key>
@@ -91,7 +92,7 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 
 ## More Information
 
-Below an overview of this Quickstart:
+Read these sections to learn more about this quickstart.
 
 ### MSAL
 
@@ -114,15 +115,15 @@ And the following to **Input Files**:
 $(SRCROOT)/Carthage/Build/iOS/MSAL.framework
 ```
 
-### MSAL Initialization
+### MSAL initialization
 
-You can add the reference for MSAL by adding the line below:
+You can add the reference for MSAL by adding the following code:
 
 ```swift
 import MSAL
 ```
 
-Then initialize MSAL using the line below:
+Then, initialize MSAL using the following code:
 
 ```swift
 self.applicationContext = try MSALPublicClientApplication.init(clientId: kClientID, authority: kAuthority)
@@ -130,21 +131,21 @@ self.applicationContext = try MSALPublicClientApplication.init(clientId: kClient
 
 > |Where: ||
 > |---------|---------|
-> |clientId | The Application Id from the application registered in *portal.microsoft.com* |
-> |authority | The Azure AD v2 endpoint - in most of cases this will be *https<span/>://login.microsoftonline.com/common/v2.0*|
+> | `clientId` | The Application ID from the application registered in *portal.microsoft.com* |
+> | `authority` | The Azure AD v2.0 endpoint. In most of cases this will be *https<span/>://login.microsoftonline.com/common/v2.0* |
 
 ### Requesting tokens
 
-Msal has two methods used acquire tokens - `acquireToken` and `acquireTokenSilent`:
+MSAL has two methods used acquire tokens: `acquireToken` and `acquireTokenSilent`.
 
 #### Getting a user token interactively
 
- Some situations require forcing users interact with Azure Active Directory v2 endpoint which will result a context switch to the system browser, to either validate users's credentials or for consent – some examples include:
+Some situations require forcing users to interact with Azure Active Directory (Azure AD) v2.0 endpoint which will result in a context switch to the system browser to either validate users's credentials or for consent. Some examples include:
 
-* The first time users signs-in to the application
-* Users may need to reenter their credentials because the password has expired
-* Your application is requesting access to a resource that the user needs to consent to
-* Two factor authentication is required
+* The first time users sign in to the application
+* When users may need to reenter their credentials because the password has expired
+* When your application is requesting access to a resource that the user needs to consent to
+* When two factor authentication is required
 
 ```swift
 self.applicationContext.acquireToken(forScopes: self.kScopes)
@@ -152,11 +153,11 @@ self.applicationContext.acquireToken(forScopes: self.kScopes)
 
 > |Where:||
 > |---------|---------|
-> |forScopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `forScopes` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
 
 #### Getting a user token silently
 
-You don't want to require user to validate their credentials every time they need to access a resource - most of the time you want token acquisitions and renewal without any user interaction - `AcquireTokenSilentAsync` is the method commonly used to obtain tokens used to access protected resources after the initial `AcquireTokenAsync`:
+You don't want to require the user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use the `AcquireTokenSilentAsync`method to obtain tokens to access protected resources after the initial `AcquireTokenAsync` method:
 
 ```swift
 self.applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first)
@@ -164,14 +165,14 @@ self.applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applic
 
 > |Where: ||
 > |---------|---------|
-> |forScopes | Contains the scopes being requested (i.e. `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
- |applicationContext.users().first | The first user in the cache (MSAL support multiple users in a single app) |
+> | `forScopes` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+ | `applicationContext.users().first` | The first user in the cache (MSAL supports multiple users in a single app) |
 
-## What is next
+## Next steps
 
-Try out the iOS tutorial for a complete step-by-step guide on building applications and building new features, including a full explanation of this Quickstart:
+Try out the iOS tutorial for a complete step-by-step guide on building applications and new features, including a full explanation of this quickstart.
 
-### Learn the steps to create the application used in this Quickstart
+### Learn the steps to create the application used in this quickstart
 
 > [!div class="nextstepaction"]
 > [Call Graph API iOS tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-ios)
