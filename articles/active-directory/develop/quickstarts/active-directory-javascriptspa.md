@@ -20,7 +20,7 @@ ms.custom: aaddev
 #Customer intent: As an app developer, I want to learn how to get access tokens using the Azure AD v2.0 endpoint so that my JavaScript app can sign in personal and work and school accounts.
 ---
 
-# Sign in users and acquire an access token from a JavaScript application
+# Quickstart: Sign in users and acquire an access token from a JavaScript application
 
 In this quickstart, you'll learn how to use a code sample that demonstrates how a JavaScript single page application (SPA) can sign in personal accounts, work and school accounts, get an access token, and call the Microsoft Graph API.
 
@@ -125,7 +125,7 @@ userAgentApplication.loginRedirect(graphAPIScopes);
 
 > |Where  |  |
 > |---------|---------|
-> |`graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
+> | `graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
 
 > [!TIP]
 > Alternatively, you may want to use the `loginPopup` method to display a popup window to sign in the user.
@@ -145,7 +145,7 @@ userAgentApplication.acquireTokenSilent(graphAPIScopes)
 
 > |Where  |  |
 > |---------|---------|
-> |`graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
+> | `graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
 
 #### Getting a user token interactively
 
