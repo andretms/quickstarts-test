@@ -41,13 +41,13 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > ### Option 2: Register and manually configure your application and code sample
 > #### Step 1: Register your application
 > 
-> 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
-> 1. Enter a name for your application, add `http://localhost:30662/` in **Reply URL**, and click **Register**.
+> 1. To register an application, go to the [Azure portal - Application Registration](https://aka.ms/registeredappsprod) and select **New registration**.
+> 1. Enter a name for your application, add `http://localhost:44316/` in **Reply URL**, and click **Register**.
 > 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
 > [!div class="sxs-lookup" renderon="portal"]
 > #### Step 1: Configure your application in Azure portal
-> For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:30662/` and enable **Implicit Grant**.
+> For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:44316/` and enable **Implicit Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
@@ -57,7 +57,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > [!NOTE]
 > If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the Redirect URL will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URL to `http://localhost:30662/` and then configure the server to start listening this port. 
 >
-> For Node.js, you can run the following from the project's directory to start listening on port 30662:
+> For Node.js, you can run the following from the project's directory to start listening on port 44316:
 > ```batch
 > node server.js
 > ```

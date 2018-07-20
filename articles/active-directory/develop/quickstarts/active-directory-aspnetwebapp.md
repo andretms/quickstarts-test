@@ -84,8 +84,7 @@ Install-Package Microsoft.Owin.Host.SystemWeb
 
 ### OWIN Startup Class
 
-The OWIN middleware uses a *startup class* that is executed when the hosting process initializes. The following code shows the parameter used by this quickstart:
-The OWIN middleware uses a *startup class* that is executed when the hosting process initializes (in the case of this sample, the *startup.cs* file located in root folder). Below shows the parameter used by this quickstart:
+The OWIN middleware uses a *startup class* that is executed when the hosting process initializes (in the case of this quickstart, the *startup.cs* file located in root folder). The following code shows the parameter used by this quickstart:
 
 ```csharp
 public void Configuration(IAppBuilder app)
