@@ -54,14 +54,6 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > [!div id="appconfigured" class="hidden"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
-> [!NOTE]
-> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the Redirect URL will be set to to *http:/<span/>/localhost:44316/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URL to `http://localhost:44316/` and then configure the server to start listening this port. 
->
-> For Node.js, you can run the following from the project's directory to start listening on port 44316:
-> ```batch
-> node server.js
-> ```
-
 #### Step 2: Download your web server or project
 
 * [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
@@ -81,6 +73,13 @@ var msalconfig = {
     redirectUri: location.origin
 };
 ```
+> [!NOTE]
+> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the Redirect URL will be set to to *http:/<span/>/localhost:44316/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URL to `http://localhost:44316/` and then configure the server to start listening this port. 
+>
+> For Node.js, you can run the following from the project's directory to start listening on port 44316:
+> ```batch
+> node server.js
+> ```
 
 ## More Information
 
