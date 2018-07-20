@@ -43,7 +43,7 @@ In this quickstart, you'll learn how an ASP.NET web app can sign in personal acc
 > 
 > 1. To register an application for this code sample, go to the [Azure portal - Application Registration](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application, add `https://localhost:44368/` in **Reply URL**, and click **Register**.
-
+> 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
 > [!div class="sxs-lookup" renderon="portal"]
 > #### Step 1: Configure your application in Azure portal
