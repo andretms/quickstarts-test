@@ -52,7 +52,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
+> > ![Already configured](media/active-directory-javascriptspa/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download your web server or project
 

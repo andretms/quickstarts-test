@@ -52,7 +52,7 @@ In this quickstart, you'll learn how an ASP.NET web app can sign in personal acc
 > > [Make this change for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with this attribute
+> > ![Already configured](media/active-directory-aspnetwebapp/green-check.png) Your application is configured with this attribute
 
 #### Step 2: Download your project
 
