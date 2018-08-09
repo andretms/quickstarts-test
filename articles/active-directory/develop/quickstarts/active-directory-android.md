@@ -44,7 +44,7 @@ This quickstart contains a code sample that demonstrates how a native Android ap
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
 >
-> > [!div id="appconfigured" class="hidden"]
+> > [!div id="appconfigured"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 
 ## Step 2: Download your web server or project

@@ -51,7 +51,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
-> > [!div id="appconfigured" class="hidden"]
+> > [!div id="appconfigured"]
 > > ![Already configured](media/active-directory-javascriptspa/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download your web server or project

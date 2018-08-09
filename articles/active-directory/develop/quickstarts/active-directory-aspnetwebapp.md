@@ -51,7 +51,7 @@ In this quickstart, you'll learn how an ASP.NET web app can sign in personal acc
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
 >
-> > [!div id="appconfigured" class="hidden"]
+> > [!div id="appconfigured"]
 > > ![Already configured](media/active-directory-aspnetwebapp/green-check.png) Your application is configured with this attribute
 
 #### Step 2: Download your project
