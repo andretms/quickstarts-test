@@ -103,7 +103,7 @@ Read the following sections for more info about this quickstart.
 
 ### MSAL
 
-MSAL ([com.microsoft.identity.client](http://javadoc.io/doc/com.microsoft.identity.client/msal)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory (Azure AD). You can use carthage to install it by adding the following in **Gradle Scripts** > **build.gradle (Module: app)** under **Dependencies**:
+MSAL ([com.microsoft.identity.client](http://javadoc.io/doc/com.microsoft.identity.client/msal)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory (Azure AD). You can use Gradle to install it by adding the following in **Gradle Scripts** > **build.gradle (Module: app)** under **Dependencies**:
 
 ```ruby  
 implementation 'com.android.volley:volley:1.1.1'
