@@ -34,7 +34,7 @@ In this quickstart, you'll learn a Windows desktop .NET (WPF) application can si
 >
 > ### Option 1: Register and auto configure your app and then download your code sample
 >
-> 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/WinDesktopQuickstartPage/sourceType/docs).
+> 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/WinDesktopQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
 > 1. Follow the instructions to download and automatically configure your new application for you in one click.
 >
