@@ -38,7 +38,7 @@ This quickstart contains a code sample that demonstrates how a Universal Windows
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
 >
-> > [!div id="appconfigured"]
+> > [!div id="appconfigured" class="alert alert-info"]
 > > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
 >
 >## Step 2: Download your Visual Studio project

@@ -45,7 +45,7 @@ In this quickstart, you'll learn how an ASP.NET web app can sign in personal acc
 > 1. Enter a name for your application, add `https://localhost:44368/` in **Reply URL**, and click **Register**.
 > 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
-> [!div class="sxs-lookup" renderon="portal"]
+> [!div class="sxs-lookup" renderon="portal" class="alert alert-info"]
 > #### Step 1: Configure your application in Azure portal
 > For the code sample for this quickstart to work, you need to add a reply URL as `http<span/>://localhost:44368/`.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
