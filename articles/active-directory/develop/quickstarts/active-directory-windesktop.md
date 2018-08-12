@@ -51,7 +51,7 @@ In this quickstart, you'll learn a Windows desktop .NET (WPF) application can si
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make this change for me]()
 >
-> > [!div id="appconfigured"]
+> > [!div id="appconfigured" class="alert alert-info"]
 > > ![Already configured](media/active-directory-windesktop/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download your Visual Studio project

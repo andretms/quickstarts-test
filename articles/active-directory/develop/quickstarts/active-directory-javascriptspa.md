@@ -45,13 +45,13 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > 1. Enter a name for your application, add `http://localhost:44316/` in **Reply URL**, and click **Register**.
 > 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
-> [!div class="sxs-lookup" renderon="portal" class="alert alert-info"]
+> [!div class="sxs-lookup" renderon="portal"]
 > #### Step 1: Configure your application in Azure portal
 > For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:44316/` and enable **Implicit Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
-> > [!div id="appconfigured"]
+> > [!div id="appconfigured" class="alert alert-info"]
 > > ![Already configured](media/active-directory-javascriptspa/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download your web server or project
