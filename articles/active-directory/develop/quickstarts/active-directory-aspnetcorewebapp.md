@@ -1,6 +1,6 @@
 ---
-title: Azure AD v2 ASP.NET Core web app Quickstart | Microsoft Docs
-description: Implementing Microsoft Sign-In on an ASP.NET core with a traditional web browser based application using OpenID Connect
+title: Azure AD v2.0 ASP.NET Core web app quickstart | Microsoft Docs
+description: Learn how to implement Microsoft Sign-In on an ASP.NET Core Web App using OpenID Connect
 services: active-directory
 documentationcenter: dev-center-name
 author: andretms
@@ -9,11 +9,12 @@ editor: ''
 
 ms.assetid: 820acdb7-d316-4c3b-8de9-79df48ba3b06
 ms.service: active-directory
+ms.component: develop
 ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 07/15/2018
+ms.date: 08/15/2018
 ms.author: andret
 ms.custom: aaddev 
 
@@ -52,14 +53,15 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Core Web
 > > [!div id="appconfigured" class="alert alert-info"]
 > > ![Already configured](media/active-directory-aspnetwebapp/green-check.png) Your application is configured with this attribute
 
-#### Step 2: Download your web server or project
+#### Step 2: Download your ASP.NET Core project
 
-- [Download the Visual Studio 2017 project](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/archive/master.zip)
+- [Download the ASP.NET Core project](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/archive/master.zip)
 
 #### Step 3: Configure your project
 
+1. Extract the zip file to a local folder (for example, `C:\Samples`)
 1. If you use Visual Studio 2017, open the project in Visual Studio (optional)
-1. Edit **appsettings.json** and replace add the Application ID from the application you just registered:
+1. Edit **appsettings.json** and replace the value for `ClientId` with the the Application Id from the application you just registered:
 
     ```json
     "ClientId": "Enter_the_Application_Id_here"
@@ -68,9 +70,11 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Core Web
 
 ## More information
 
+This section gives an overview of the code required to sign-in users. This can be useful to understand how the code works, main arguments, and also if you want to add sign-in to an existing ASP.NET Core application.
+
 ### Startup Class
 
-Microsoft.AspNetCore.Authentication Middleware uses a Startup class that is executed when the hosting process initializes:
+*Microsoft.AspNetCore.Authentication* middleware uses a Startup class that is executed when the hosting process initializes:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
