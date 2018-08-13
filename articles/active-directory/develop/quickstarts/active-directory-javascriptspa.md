@@ -34,7 +34,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 >
 > ### Option 1: Register and auto configure your app and then download your code sample
 >
-> 1. Go to the [Azure portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs).
+> 1. Go to the [Azure portal - Application Registration [Prod]](https://portal.azure.com/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
 > 1. Follow the instructions to download and automatically configure your new application for you in one click.
 > [!div renderon="docs"]
@@ -51,7 +51,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
-> > [!div id="appconfigured" class="hidden"]
+> > [!div id="appconfigured" class="alert alert-info"]
 > > ![Already configured](media/active-directory-javascriptspa/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download your web server or project
