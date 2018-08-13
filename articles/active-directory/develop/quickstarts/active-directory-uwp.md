@@ -59,6 +59,7 @@ This quickstart contains a code sample that demonstrates how a Universal Windows
 
 ## Step 3: Configure your Visual Studio project
 
+1. Extract the zip file to a local folder (for example, **C:\Azure-Samples**)
 1. Open the project in Visual Studio
 1. Edit **App.Xaml.cs** and replace the line starting with `private static string ClientId` with:
 
