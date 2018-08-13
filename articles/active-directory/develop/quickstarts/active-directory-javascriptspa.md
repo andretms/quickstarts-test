@@ -20,7 +20,7 @@ ms.custom: aaddev
 #Customer intent: As an app developer, I want to learn how to get access tokens using the Azure AD v2.0 endpoint so that my JavaScript app can sign in personal and work and school accounts.
 ---
 
-# Sign in users and acquire an access token from a JavaScript application
+# Quickstart: Sign in users and acquire an access token from a JavaScript application
 
 In this quickstart, you'll learn how to use a code sample that demonstrates how a JavaScript single page application (SPA) can sign in personal accounts, work and school accounts, get an access token, and call the Microsoft Graph API.
 
@@ -29,10 +29,10 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart application:
-> * [Express] [Option 1: Register and then download your quickstart application](#option-1-register-your-application-and-download-your-quickstart-app)
-> * [Manual] [Option 2: Register your application and configure the sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
+> * [Express] [Option 1: Register and auto configure your app and then download your code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
+> * [Manual] [Option 2: Register and manually configure your application and code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
 >
-> ### Option 1: Register your application and download your quickstart app
+> ### Option 1: Register and auto configure your app and then download your code sample
 >
 > 1. Go to the [Azure portal - Application Registration [Prod]](https://portal.azure.com/signin/index/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application and click **Register**.
@@ -41,31 +41,25 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > ### Option 2: Register and manually configure your application and code sample
 > #### Step 1: Register your application
 > 
-> 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
-> 1. Enter a name for your application, add `http<span/>://localhost:30662/` in **Reply URL**, and click **Register**.
+> 1. To register an application, go to the [Azure portal - Application Registration](https://aka.ms/registeredappsprod) and select **New registration**.
+> 1. Enter a name for your application, add `http://localhost:44316/` in **Reply URL**, and click **Register**.
 > 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
 
 > [!div class="sxs-lookup" renderon="portal"]
-> ### Step 1: Configure your application in Azure portal
-> For the code sample for this quickstart to work, you need to add a reply URL as `http<span/>://localhost:30662/` and enable **Implicit Grant**.
+> #### Step 1: Configure your application in Azure portal
+> For the code sample for this quickstart to work, you need to add a reply URL as `http://localhost:44316/` and enable **Implicit Grant**.
 > > [!div renderon="portal" id="makechanges" class="nextstepaction"]
 > > [Make these changes for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
+> > ![Already configured](media/active-directory-javascriptspa/green-check.png) Your application is configured with these attributes
 
-> [!NOTE]
-> If you use Visual Studio, the Redirect URL will be set to to *http:<span/>//localhost:30662/* as it is configured in the code sample's project. If you use Python or any other web server, set the redirect URL to `http://<span/>localhost:30662/`, run the following command line:
-> ```bash
-> python -m http.server 30662
-> ```
+#### Step 2: Download your web server or project
 
-### Step 2: Download your web server or project
+* [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
+* [Download the core project files - for a web server, such as Node.js](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
 
-- [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
-- [Download the core project files - for a local web server, such as Python](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
-
-### Step 3: Configure your JavaScript SPA
+#### Step 3: Configure your JavaScript SPA
 
 > [!div renderon="docs"]
 > Edit `msalconfig.js` and replace `Enter_the_Application_Id_here` with the Application ID your application:
@@ -79,6 +73,13 @@ var msalconfig = {
     redirectUri: location.origin
 };
 ```
+> [!NOTE]
+> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the Redirect URL will be set to to *http:/<span/>/localhost:44316/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URL to `http://localhost:44316/` and then configure the server to start listening this port. 
+>
+> For Node.js, you can run the following from the project's directory to start listening on port 44316:
+> ```batch
+> node server.js
+> ```
 
 ## More Information
 
@@ -90,7 +91,7 @@ MSAL is the library used to sign in users and request tokens used to access an A
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.1/js/msal.min.js"></script>
 ````
 
-Alternatively, you can download it through npm:
+Alternatively, if you have Node installed, you can download it through npm:
 
 ```batch
 npm install msal
@@ -123,7 +124,7 @@ userAgentApplication.loginRedirect(graphAPIScopes);
 
 > |Where  |  |
 > |---------|---------|
-> |`graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs). |
+> | `graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
 
 > [!TIP]
 > Alternatively, you may want to use the `loginPopup` method to display a popup window to sign in the user.
@@ -143,14 +144,14 @@ userAgentApplication.acquireTokenSilent(graphAPIScopes)
 
 > |Where  |  |
 > |---------|---------|
-> |`graphAPIScopes`  | (Optional) Contains scopes being requested at login time (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs). |
+> | `graphAPIScopes`   | (Optional) Contains scopes being requested at login time (that is, `[ "user.read" ]` for Microsoft Graph or `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs). |
 
 #### Getting a user token interactively
 
  There are situations where you need to force users to interact with Azure AD v2.0 endpoint. For example:
-- Users may need to reenter their credentials because their password has expired
-- Your application is requesting access to a resource that the user needs to consent to
-- Two factor authentication is required
+* Users may need to reenter their credentials because their password has expired
+* Your application is requesting access to additional resource scopes that the user needs to consent to
+* Two factor authentication is required
 
 The usual recommended pattern for most applications is to call `acquireTokenSilent` first, then catch the exception and then call `acquireTokenRedirect` (or `acquireTokenPopup`) to start an interactive request.
 

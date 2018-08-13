@@ -121,7 +121,7 @@ Msal has two methods used acquire tokens - `acquireToken` and `acquireTokenSilen
 
 #### Getting a user token interactively
 
- Some situations require forcing users interact with Azure Active Directory v2 endpoint which will result a context switch to the system browser, to either validate users's credentials or for consent â€“ some examples include:
+ Some situations require forcing users interact with Azure Active Directory v2 endpoint which will result a context switch to the system browser, to either validate users's credentials or for consent – some examples include:
 
 * The first time users signs-in to the application
 * Users may need to reenter their credentials because the password has expired
