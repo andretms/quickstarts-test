@@ -47,7 +47,7 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 > 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Installed client** under **Type**, and then select **Save**.
 >
 >> [!TIP]
->> To know the *Application ID*, go to Overview page.
+>> To find the *Application ID*, go to Overview page.
 
 > [!div renderon="portal" class="sxs-lookup"]
 > ### Step 1: Configure your application
