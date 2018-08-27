@@ -48,7 +48,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application and click **Register**.
-> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Installed client** under **Type**, and then select **Save**.
+> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Public client (mobile & desktop)** under **Type**, and then select **Save**.
 >
 >> [!TIP]
 >> To find the *Application ID*, go to Overview page.

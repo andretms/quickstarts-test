@@ -44,7 +44,7 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 > 
 > 1. To register an application, go to the [Azure portal - Application Registration [Prod]](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application and click **Register**.
-> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Installed client** under **Type**, and then select **Save**.
+> 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Public client (mobile & desktop)** under **Type**, and then select **Save**.
 >
 >> [!TIP]
 >> To find the *Application ID*, go to Overview page.
@@ -67,8 +67,8 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 1. Extract the zip file and open the project in XCode.
 1. Edit **ViewController.swift** and replace the line starting with 'let kClientID' with the following code snippet:
 
-    ```csharp
-    private static string ClientId = "Enter_the_Application_Id_here";
+    ```java
+    let kClientID = "Enter_the_Application_Id_here"
     ```
 1. Press Control + click **Info.plist** to bring up the contextual menu, and then select **Open As** > **Source Code**.
 1. Under the dict root node, add the following code:
@@ -83,8 +83,7 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
             <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>msal[Your_Application_Id_Here]</string>
-                <string>auth</string>
+                <string>msal{Your_Application_Id_Here}</string>
             </array>
         </dict>
     </array>
@@ -103,7 +102,7 @@ echo "github \"AzureAD/microsoft-authentication-library-for-objc\" \"master\"" >
 carthage update
 ```
 
-Then, in XCode, open the **General**, go to **Linked Frameworks and Libraries** and add **MSAL.framework** in **Add other...**, then add the following content in **New Run Script Phase**:
+Then, in XCode, open the **General**, go to **Linked Frameworks and Libraries** and add **MSAL.framework** in **Add other...**, then add the following content in **New Run Script Phase** under **Build Phases**:
 
 ```text
 /usr/local/bin/carthage copy-frameworks
@@ -114,6 +113,10 @@ And the following to **Input Files**:
 ```text
 $(SRCROOT)/Carthage/Build/iOS/MSAL.framework
 ```
+
+> [!NOTE]
+> #### Install Carthage to download and build MSAL
+> Carthage package manager is used during the preview period of MSAL – it integrates with XCode while maintaining the ability for Microsoft to make changes to the library. Download and install the latest release of Carthage [here](https://github.com/Carthage/Carthage/releases)
 
 ### MSAL initialization
 
@@ -126,19 +129,19 @@ import MSAL
 Then, initialize MSAL using the following code:
 
 ```swift
-self.applicationContext = try MSALPublicClientApplication.init(clientId: kClientID, authority: kAuthority)
+self.applicationContext = try MSALPublicClientApplication(clientId: kClientID, authority: kAuthority)
 ```
 
 > |Where: ||
 > |---------|---------|
-> | `clientId` | The Application ID from the application registered in *portal.microsoft.com* |
-> | `authority` | The Azure AD v2.0 endpoint. In most of cases this will be *https<span/>://login.microsoftonline.com/common/v2.0* |
+> | `clientId` | The Application ID from the application registered in *portal.azure.com* |
+> | `authority` | The Azure AD v2.0 endpoint. In most of cases this will be *https<span/>://login.microsoftonline.com/common* |
 
 ### Requesting tokens
 
-MSAL has two methods used acquire tokens: `acquireToken` and `acquireTokenSilent`.
+MSAL has two methods used to acquire tokens: `acquireToken` and `acquireTokenSilent`.
 
-#### Getting a user token interactively
+#### Getting an access token interactively
 
 Some situations require forcing users to interact with Azure Active Directory (Azure AD) v2.0 endpoint which will result in a context switch to the system browser to either validate users's credentials or for consent. Some examples include:
 
@@ -148,7 +151,7 @@ Some situations require forcing users to interact with Azure Active Directory (A
 * When two factor authentication is required
 
 ```swift
-self.applicationContext.acquireToken(forScopes: self.kScopes)
+applicationContext.acquireToken(forScopes: self.kScopes)
 ```
 
 > |Where:||
@@ -160,7 +163,7 @@ self.applicationContext.acquireToken(forScopes: self.kScopes)
 You don't want to require the user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use the `AcquireTokenSilentAsync`method to obtain tokens to access protected resources after the initial `AcquireTokenAsync` method:
 
 ```swift
-self.applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first)
+applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first)
 ```
 
 > |Where: ||
