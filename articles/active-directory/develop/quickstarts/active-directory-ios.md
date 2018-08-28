@@ -83,11 +83,13 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
             <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>msal{Your_Application_Id_Here}</string>
+                <string>msalEnter_the_Application_Id_here</string>
             </array>
         </dict>
     </array>
     ```
+> [!div renderon="docs"]
+> 5. Replace `Enter_the_Application_Id_here` with the Application ID your application
 
 ## More Information
 
@@ -151,25 +153,25 @@ Some situations require forcing users to interact with Azure Active Directory (A
 * When two factor authentication is required
 
 ```swift
-applicationContext.acquireToken(forScopes: self.kScopes)
+applicationContext.acquireToken(forScopes: self.kScopes) { (result, error) ... }
 ```
 
 > |Where:||
 > |---------|---------|
-> | `forScopes` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `forScopes` | Contains the scopes being requested (that is, `[ "user.read" ]` for Microsoft Graph or usually `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs) |
 
 #### Getting a user token silently
 
-You don't want to require the user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use the `AcquireTokenSilentAsync`method to obtain tokens to access protected resources after the initial `AcquireTokenAsync` method:
+You don't want to require the user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use the `acquireTokenSilent`method to obtain tokens to access protected resources after the initial `acquireToken` method:
 
 ```swift
-applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first)
+applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first) { (result, error) ... }
 ```
 
 > |Where: ||
 > |---------|---------|
 > | `forScopes` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
- | `applicationContext.users().first` | The first user in the cache (MSAL supports multiple users in a single app) |
+> | `applicationContext.users().first` | The user requesting the token (MSAL supports multiple users in a single app). In the case of this Quickstart, the value points to the first user in the cache. |
 
 ## Next steps
 
