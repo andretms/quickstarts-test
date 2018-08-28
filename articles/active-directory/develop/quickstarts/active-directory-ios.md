@@ -170,7 +170,7 @@ applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: application
 
 > |Where: ||
 > |---------|---------|
-> | `forScopes` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `forScopes` | Contains the scopes being requested (that is, `[ "user.read" ]` for Microsoft Graph or usually `[ "api://<Application ID>/access_as_user" ]` for custom Web APIs) |
 > | `applicationContext.users().first` | The user requesting the token (MSAL supports multiple users in a single app). In the case of this Quickstart, the value points to the first user in the cache. |
 
 ## Next steps
