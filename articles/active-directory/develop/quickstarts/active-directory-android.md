@@ -69,7 +69,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
 #### Step 3: Configure your project
 
 1. Extract and open the Project in Android Studio.
-1. Under **app** > **java** > **<i>{host}.{namespace}</i>**, open **MainActivity*.
+1. Under **app** > **java** > **<i>{host}.{namespace}</i>**, open **MainActivity**.
 1. Replace the line starting with `final static String CLIENT_ID` with:
 
 	> [!div renderon="portal" class="sxs-lookup"]
