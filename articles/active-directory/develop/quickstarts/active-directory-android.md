@@ -122,7 +122,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
     > ```
 
 > [!div renderon="docs"]
-> 6. Replace `ENTER_THE_APPLICATION_ID_HERE` with the Application ID your application
+> 6. Replace `<ENTER_THE_APPLICATION_ID_HERE>` with the Application ID your application
 
 ## More Information
 

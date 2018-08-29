@@ -19,7 +19,7 @@ ms.author: andret
 
 
 # Sign-in users and acquire an access token from a JavaScript application
-
+<!--
 1. Test block 1
 
     ```javascript
@@ -299,3 +299,4 @@ Try out the JavaScript tutorials for a complete step-by-step guide on building a
 -->
 
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
+--!>
