@@ -203,7 +203,7 @@ Try out the Android tutorial for a complete step-by-step guide on building appli
 
 ### MSAL for Android library wiki
 
-Read more information about the use of MSAL Library for Android:
+Read more information about MSAL library for Android:
 
 > [!div class="nextstepaction"]
 > [MSAL for Android library wiki](https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki)
