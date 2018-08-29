@@ -51,7 +51,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
 > 1. Select the **Authentication** page, then add `msal{AppId}://auth` (where *{AppId}* is the application ID from the application you just registered), select **Public client (mobile & desktop)** under **Type**, and then select **Save**.
 >
 >> [!TIP]
->> To find the *Application ID*, go to Overview page.
+>> To find the *Application ID*, go to *Overview* page.
 
 > [!div renderon="portal" class="sxs-lookup"]
 > ### Step 1: Configure your application
@@ -122,7 +122,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
     > ```
 
 > [!div renderon="docs"]
-> 6. Replace `<ENTER_THE_APPLICATION_ID_HERE>` with the Application ID your application
+> 6. Replace `<ENTER_THE_APPLICATION_ID_HERE>` with the *Application ID* for your application. If you need to find the *Application ID*, go to the *Overview* page.
 
 ## More Information
 

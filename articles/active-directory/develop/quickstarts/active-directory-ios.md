@@ -88,8 +88,10 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
         </dict>
     </array>
     ```
+
 > [!div renderon="docs"]
-> 5. Replace `Enter_the_Application_Id_here` with the Application ID your application
+> 6. Replace `Enter_the_Application_Id_here` with the *Application ID* for your application. If you need to find the *Application ID*, go to the *Overview* page.
+
 
 ## More Information
 
