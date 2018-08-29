@@ -296,7 +296,7 @@ Try out the JavaScript tutorials for a complete step-by-step guide on building a
 > [!div class="nextstepaction"]
 > [Sign-Out tutorial](..\tutorials\active-directory-javascriptspa-sign-out.md)
 > [Call Graph API tutorial](..\tutorials\active-directory-javascriptspa-call-graph-api.md)
--->
+
 
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
 --!>
