@@ -72,30 +72,57 @@ This quickstart contains a code sample that demonstrates how an Android applicat
 1. Under **app** > **java** > **<i>{host}.{namespace}</i>**, open **MainActivity*.
 1. Replace the line starting with `final static String CLIENT_ID` with:
 
-    ```java
-    final static String CLIENT_ID = "Enter_the_Application_Id_Here";
-    ```
+	> [!div renderon="portal" class="sxs-lookup"]
+    > ```java
+    > final static String CLIENT_ID = "ENTER_THE_APPLICATION_ID_HERE";
+    > ```
+
+	> [!div renderon="docs"]
+    > ```java
+    > final static String CLIENT_ID = "<ENTER_THE_APPLICATION_ID_HERE>";
+    > ```
+
 1. Open: **app** > **manifests** > **AndroidManifest.xml**.
 1. Add the following activity to the **manifest\application** node. This code snippet registers a **BrowserTabActivity** to allow the OS to resume your application after completing the authentication:
 
-    ```xml
-    <!--Intent filter to capture System Browser calling back to our app after Sign In-->
-    <activity
-        android:name="com.microsoft.identity.client.BrowserTabActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <category android:name="android.intent.category.BROWSABLE" />
-    
-            <!--Add in your scheme/host from registered redirect URI-->
-            <!--By default, the scheme should be similar to 'msal[appId]' -->
-            <data android:scheme="msalEnter_the_Application_Id_here"
-                android:host="auth" />
-        </intent-filter>
-    </activity>
-    ```
+	> [!div renderon="docs"]
+	> ```xml
+    > <!--Intent filter to capture System Browser calling back to our app after Sign In-->
+    > <activity
+    >     android:name="com.microsoft.identity.client.BrowserTabActivity">
+    >     <intent-filter>
+    >         <action android:name="android.intent.action.VIEW" />
+    >         <category android:name="android.intent.category.DEFAULT" />
+    >         <category android:name="android.intent.category.BROWSABLE" />
+    > 
+    >         <!--Add in your scheme/host from registered redirect URI-->
+    >         <!--By default, the scheme should be similar to 'msal[appId]' -->
+    >         <data android:scheme="msal<ENTER_THE_APPLICATION_ID_HERE>"
+    >             android:host="auth" />
+    >     </intent-filter>
+    > </activity>
+    > ```
+
+	> [!div renderon="portal" class="sxs-lookup"]
+	> ```xml
+    > <!--Intent filter to capture System Browser calling back to our app after Sign In-->
+    > <activity
+    >     android:name="com.microsoft.identity.client.BrowserTabActivity">
+    >     <intent-filter>
+    >         <action android:name="android.intent.action.VIEW" />
+    >         <category android:name="android.intent.category.DEFAULT" />
+    >         <category android:name="android.intent.category.BROWSABLE" />
+    > 
+    >         <!--Add in your scheme/host from registered redirect URI-->
+    >         <!--By default, the scheme should be similar to 'msal[appId]' -->
+    >         <data android:scheme="msalENTER_THE_APPLICATION_ID_HERE"
+    >             android:host="auth" />
+    >     </intent-filter>
+    > </activity>
+    > ```
+
 > [!div renderon="docs"]
-> 6. Replace `Enter_the_Application_Id_here` with the Application ID your application
+> 6. Replace `ENTER_THE_APPLICATION_ID_HERE` with the Application ID your application
 
 ## More Information
 
@@ -105,7 +132,7 @@ Read the following sections for more info about this quickstart.
 
 MSAL ([com.microsoft.identity.client](http://javadoc.io/doc/com.microsoft.identity.client/msal)) is the library used to sign in users and request tokens used to access an API protected by Microsoft Azure Active Directory (Azure AD). You can use Gradle to install it by adding the following in **Gradle Scripts** > **build.gradle (Module: app)** under **Dependencies**:
 
-```ruby  
+```gradle  
 implementation 'com.android.volley:volley:1.1.1'
 implementation 'com.microsoft.identity.client:msal:0.1.+'
 ```
@@ -128,7 +155,7 @@ sampleApp = new PublicClientApplication(
 
 > |Where: ||
 > |---------|---------|
-> |`CLIENT_ID` | The Application ID from the application registered in *portal.microsoft.com* |
+> |`CLIENT_ID` | The Application ID from the application registered in *portal.azure.com* |
 
 ### Requesting tokens
 
@@ -149,7 +176,7 @@ sampleApp.acquireToken(this, SCOPES, getAuthInteractiveCallback());
 
 > |Where:||
 > |---------|---------|
-> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "<Application ID URL>/scope" }` for custom Web APIs (i.e. `api://<Application ID>/access_as_user`) |
 > | `getAuthInteractiveCallback` | Callback executed when control is given back to the application after authentication |
 
 #### Getting a user token silently
@@ -162,16 +189,23 @@ sampleApp.acquireToken(getActivity(), SCOPES, getAuthInteractiveCallback());
 
 > |Where:||
 > |---------|---------|
-> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "api://<Application ID>/access_as_user" }` for custom Web APIs) |
+> | `SCOPES` | Contains the scopes being requested (that is, `{ "user.read" }` for Microsoft Graph or `{ "<Application ID URL>/scope" }` for custom Web APIs (i.e. `api://<Application ID>/access_as_user`) |
 > | `getAuthInteractiveCallback` | Callback executed when control is given back to the application after authentication |
 
 ## Next steps
 
-Try out the Android tutorial for a complete step-by-step guide on building applications and new features, including a full explanation of this quickstart.
-
 ### Learn the steps to create the application used in this quickstart
+
+Try out the Android tutorial for a complete step-by-step guide on building applications and new features, including a full explanation of this quickstart.
 
 > [!div class="nextstepaction"]
 > [Call Graph API Android tutorial](https://docs.microsoft.com/azure/active-directory/develop/guidedsetups/active-directory-android)
+
+### MSAL for Android library wiki
+
+Read more information about the use of MSAL Library for Android:
+
+> [!div class="nextstepaction"]
+> [MSAL for Android library wiki](https://github.com/AzureAD/microsoft-authentication-library-for-android/wiki)
 
 [!INCLUDE [Help and support](../../../../includes/active-directory-develop-help-support-include.md)]
