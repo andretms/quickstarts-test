@@ -67,30 +67,54 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 1. Extract the zip file and open the project in XCode.
 1. Edit **ViewController.swift** and replace the line starting with 'let kClientID' with the following code snippet:
 
-    ```java
-    let kClientID = "Enter_the_Application_Id_here"
-    ```
+	> [!div renderon="portal" class="sxs-lookup"]
+    > ```swift
+    > let kClientID = "Enter_the_Application_Id_here"
+    > ```
+
+	> [!div renderon="docs"]
+    > ```swift
+    > let kClientID = "<ENTER_THE_APPLICATION_ID_HERE>"
+    > ```	
 1. Press Control + click **Info.plist** to bring up the contextual menu, and then select **Open As** > **Source Code**.
 1. Under the dict root node, add the following code:
 
-    ```xml
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleTypeRole</key>
-            <string>Editor</string>
-            <key>CFBundleURLName</key>
-            <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>msalEnter_the_Application_Id_here</string>
-            </array>
-        </dict>
-    </array>
-    ```
+	> [!div renderon="portal" class="sxs-lookup"]
+    > ```xml
+    > <key>CFBundleURLTypes</key>
+    > <array>
+    >     <dict>
+    >         <key>CFBundleTypeRole</key>
+    >         <string>Editor</string>
+    >         <key>CFBundleURLName</key>
+    >         <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    >         <key>CFBundleURLSchemes</key>
+    >         <array>
+    >             <string>msalEnter_the_Application_Id_here</string>
+    >         </array>
+    >     </dict>
+    > </array>
+    > ```
+
+	> [!div renderon="docs"]
+    > ```xml
+    > <key>CFBundleURLTypes</key>
+    > <array>
+    >     <dict>
+    >         <key>CFBundleTypeRole</key>
+    >         <string>Editor</string>
+    >         <key>CFBundleURLName</key>
+    >         <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    >         <key>CFBundleURLSchemes</key>
+    >         <array>
+    >             <string>msal<ENTER_THE_APPLICATION_ID_HERE></string>
+    >         </array>
+    >     </dict>
+    > </array>
+    > ```
 
 > [!div renderon="docs"]
-> 6. Replace `Enter_the_Application_Id_here` with the *Application ID* for your application. If you need to find the *Application ID*, go to the *Overview* page.
+> 5. Replace `<ENTER_THE_APPLICATION_ID_HERE>` with the *Application ID* for your application. If you need to find the *Application ID*, go to the *Overview* page.
 
 
 ## More Information
@@ -106,7 +130,7 @@ echo "github \"AzureAD/microsoft-authentication-library-for-objc\" \"master\"" >
 carthage update
 ```
 
-Then, in XCode, open the **General**, go to **Linked Frameworks and Libraries** and add **MSAL.framework** in **Add other...**, then add the following content in **New Run Script Phase** under **Build Phases**:
+Then, in XCode, open the **General**, go to **Linked Frameworks and Libraries** and add **MSAL.framework** in **Add other...**, then add the following content in **New Run Script Phase** under **Build Phases** tab:
 
 ```text
 /usr/local/bin/carthage copy-frameworks
@@ -155,25 +179,25 @@ Some situations require forcing users to interact with Azure Active Directory (A
 * When two factor authentication is required
 
 ```swift
-applicationContext.acquireToken(forScopes: self.kScopes) { (result, error) ... }
+applicationContext.acquireToken(forScopes: self.kScopes) { (result, error) in /* Add your handling logic */}
 ```
 
 > |Where:||
 > |---------|---------|
 > | `forScopes` | Contains the scopes being requested (that is, [ "user.read" ]` for Microsoft Graph or `[ "<Application ID URL>/scope" ]` for custom Web APIs (i.e. `api://<Application ID>/access_as_user`)) |
 
-#### Getting a user token silently
+#### Getting an access token silently
 
 You don't want to require the user to validate their credentials every time they need to access a resource. Most of the time you want token acquisitions and renewal without any user interaction. You can use the `acquireTokenSilent`method to obtain tokens to access protected resources after the initial `acquireToken` method:
 
 ```swift
-applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first) { (result, error) ... }
+applicationContext.acquireTokenSilent(forScopes: self.kScopes, user: applicationContext.users().first) { (result, error) in /* Add your handling logic */}
 ```
 
 > |Where: ||
 > |---------|---------|
-> | `forScopes` | Contains the scopes being requested (that is, `[ "user.read" ]` for Microsoft Graph or or `[ "<Application ID URL>/scope" ]` for custom Web APIs (i.e. `api://<Application ID>/access_as_user`)) |
-> | `applicationContext.users().first` | The user requesting the token (MSAL supports multiple users in a single app). In the case of this Quickstart, the value points to the first user in the cache. |
+> | `forScopes` | Contains the scopes being requested (that is, `[ "user.read" ]` for Microsoft Graph or `[ "<Application ID URL>/scope" ]` for custom Web APIs (i.e. `api://<Application ID>/access_as_user`)) |
+> | `user` | The user requesting the token (MSAL supports multiple users in a single app). In the case of this Quickstart, the value points to the first user in the cache (`applicationContext.users().first`). |
 
 ## Next steps
 
