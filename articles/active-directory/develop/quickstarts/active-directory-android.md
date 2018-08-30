@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 07/20/2018
+ms.date: 09/23/2018
 ms.author: andret
 ms.custom: aaddev 
 #Customer intent: As an application developer, I want to learn how Android native apps can call an API that requires access tokens by Azure AD v2.0 endpoint.
