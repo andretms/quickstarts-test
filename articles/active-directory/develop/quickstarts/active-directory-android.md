@@ -60,7 +60,7 @@ This quickstart contains a code sample that demonstrates how an Android applicat
 > > [Make this change for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with these attributes
+> > ![Already configured](media/active-directory-android/green-check.png) Your application is configured with these attributes
 
 #### Step 2: Download the project
 

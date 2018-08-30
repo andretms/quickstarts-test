@@ -56,7 +56,7 @@ This quickstart contains a code sample that demonstrates how a native iOS applic
 > > [Make this change for me]()
 >
 > > [!div id="appconfigured" class="hidden"]
-> > ![Already configured](../../../../includes/media/active-directory-develop-common/green-check.png) Your application is configured with this attribute
+> > ![Already configured](media/active-directory-ios/green-check.png) Your application is configured with this attribute
 
 ## Step 2: Download your web server or project
 
