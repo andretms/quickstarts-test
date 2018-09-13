@@ -14,7 +14,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 08/15/2018
+ms.date: 09/11/2018
 ms.author: andret
 ms.custom: aaddev 
 
@@ -42,7 +42,7 @@ This quickstart contains a code sample that demonstrates how an ASP.NET Core Web
 > 
 > 1. To register an application for this code sample, go to the [Azure portal - Application Registration](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application, add `https://localhost:3110/` in **Reply URL**, and click **Register**.
-> 1. Select **Authentication** menu, set **ID tokens** under **Implicit Grant**, and then select **Save**.
+> 1. Select then **Authentication** menu, check **Access tokens** and **ID tokens** under **Implicit Grant**, and then select **Save**.
 
 > [!div class="sxs-lookup" renderon="portal"]
 > #### Step 1: Configure your application in Azure portal
@@ -104,7 +104,7 @@ public void Configure(string name, OpenIdConnectOptions options)
     options.Authority = $"{_azureOptions.Instance}common/v2.0";   // V2 specific
     options.UseTokenLifetime = true;
     options.RequireHttpsMetadata = false;
-    options.TokenValidationParameters.ValidateIssuer = false;     // accept several tenants
+    options.TokenValidationParameters.ValidateIssuer = false;     // accept several tenants (here simplified)
 }
 ```
 > |Where  |  |
