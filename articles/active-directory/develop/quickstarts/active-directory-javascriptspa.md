@@ -29,14 +29,14 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 > [!div renderon="docs"]
 > ## Register your application and download your quickstart app
 > You have two options to start your quickstart app:
-> * [Express] [Option 1: Register and auto configure your app and then download the code sample](#option-1-register-and-auto-configure-your-app-and-then-download-your-code-sample)
-> * [Manual] [Option 2: Register and manually configure your app and then download the code sample](#option-2-register-and-manually-configure-your-application-and-code-sample)
+> * [Express] [Option 1: Register and auto configure your app and then download the code sample](#option-1-register-and-auto-configure-your-app-and-then-download-the-code-sample)
+> * [Manual] [Option 2: Register and manually configure your app and then download the code sample](#option-2-register-and-manually-configure-your-app-and-then-download-the-code-sample)
 >
 > ### Option 1: Register and auto configure your app and then download the code sample
 >
 > 1. Go to the [Azure portal - Application Registration](https://portal.azure.com/?Microsoft_AAD_RegisteredApps=true#blade/Microsoft_AAD_RegisteredApps/applicationsListBlade/quickStartType/JavascriptSpaQuickstartPage/sourceType/docs).
 > 1. Enter a name for your application.
-> 1. Select **Accounts in any Azure AD directory and personal Microsoft accounts** under Supported Microsoft accounts and click **Register**.
+> 1. Select **Accounts in any Azure AD directory and personal Microsoft accounts** under *Supported Microsoft accounts* (Optional). Click **Register**.
 > 1. Follow the instructions to download and automatically configure your new application for you in one click.
 >
 > [!div renderon="docs"]
@@ -45,7 +45,7 @@ In this quickstart, you'll learn how to use a code sample that demonstrates how 
 >
 > 1. To register an application, go to the [Azure portal - Application Registration](https://aka.ms/registeredappsprod) and select **New registration**.
 > 1. Enter a name for your application.
-> 1. Select **Accounts in any Azure AD directory and personal Microsoft accounts** under Supported Microsoft accounts.
+> 1. Select **Accounts in any Azure AD directory and personal Microsoft accounts** under *Supported Microsoft accounts* (Optional).
 > 1. Under **Redirect URI**, select **Web** and add `http://localhost:30662/`. Click **Register**.
 > 1. Select **Authentication** menu, enable **ID tokens** and **Access tokens** under **Implicit Grant**, and then select **Save**.
 
@@ -64,12 +64,12 @@ You can choose one of these options suitable to your development environment.
 * [Download the core project files - for a web server, such as Node.js](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/core.zip)
 * [Download the Visual Studio project](https://github.com/Azure-Samples/active-directory-javascript-graphapi-v2/archive/VisualStudio.zip)
 
-Extract the zip file of the project to a local directory such as C://spa.
+Extract the zip file to a local folder (for example, **C:\Azure-Samples**).
 
 #### Step 3: Configure your JavaScript app
 
 > [!div renderon="docs"]
-> Edit `msalconfig.js` and replace `Enter_the_Application_Id_here` with the Application ID of your application:
+> Edit `msalconfig.js` and replace `Enter_the_Application_Id_here` with the Application ID of the app you just registered. You can find the *Application ID* on the *Overview* page.
 
 > [!div class="sxs-lookup" renderon="portal"]
 > Edit `msalconfig.js` and replace msalconfig with:
@@ -81,7 +81,7 @@ var msalconfig = {
 };
 ```
 > [!NOTE]
-> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the redirect URI will be set to to *http:/<span/>/localhost:30662/* as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URI to *http:/<span/>/localhost:30662/* and then configure the server to start listening on this port.
+> If you use [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/), the redirect URI will be set to `http://localhost:30662/` as it is configured in the code sample's project. If you use [Node.js](https://nodejs.org/en/download/) or any other web server, set the redirect URI to `http://localhost:30662/` and then configure the server to start listening on this port.
 >
 
 #### Step 4: Run the project
@@ -93,7 +93,7 @@ If using Node.js, on a command line you can run the following from the project's
  npm install
  node server.js
  ```
-In a browser window navigate to the `http://localhost:30662/` location and you see the **Call Microsoft Graph API** button to start sign-in.
+Open a web browser and navigate to `http://localhost:30662/`. Click **Call Microsoft Graph API** button to start sign-in.
 
 
 ## More Information
@@ -125,7 +125,7 @@ var userAgentApplication = new Msal.UserAgentApplication(msalconfig.clientID, nu
 > |Where  |  |
 > |---------|---------|
 > |`ClientId`     |Application Id from the application registered in the Azure Portal|
-> |`authority`    |It is the authority URL. Passing *null* sets the default authority to <i>https:<span/>//login.microsoftonline.com/common</i>. If using a specific tenant, set authority to <i>https:<span/>//login.microsoftonline.com/&lt;tenant name or ID&gt;</i>|
+> |`authority`    |It is the authority URL. Passing *null* sets the default authority to `https://login.microsoftonline.com/common`. If your app is single-tenant (targeting accounts in one directory only), set this value to `https://login.microsoftonline.com/<tenant name or ID>`|
 > |`loginCallBack`| Callback method called after the authentication redirects back to app|
 > |`redirectUri`  |URL where users are redirected back after authentication with Azure AD|
 
