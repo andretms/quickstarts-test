@@ -17,7 +17,6 @@ ms.workload: identity
 ms.date: 09/25/2018
 ms.author: andret
 ms.custom: aaddev 
-#Customer intent: As an application developer, I want to learn how my Universal Windows Platform (XAML) application can get an access token and call an API that's protected by an Azure AD v2.0 endpoint.
 ---
 
 # Call the Microsoft Graph API from a Universal Windows Platform (UWP) application
@@ -36,23 +35,15 @@ This quickstart contains a code sample that demonstrates how a Universal Windows
 > 1. Ensure that the **Guided Setup** check box is cleared, and then select **Create**.
 > 1. Select **Add Platform**, select **Native Application**, and then select **Save**.
 
-> [!div renderon="portal" class="sxs-lookup alert alert-info"]
-> #### Step 1: Configure your application
-> For the code sample for this quickstart to work, you need to add a redirect URL as **urn:ietf:wg:oauth:2.0:oob**.
-> > [!div renderon="portal" id="makechanges" class="nextstepaction"]
-> > [Make this change for me]()
->
-> > [!div id="appconfigured" class="alert alert-info"]
-> > ![Already configured](media/quickstart-v2-uwp/green-check.png) Your application is configured with these attributes
-
 ::: zone target="chromeless"
+
+### --- Chromeless ---
 
 For the code sample for this quickstart to work, you need to add a redirect URL as **urn:ietf:wg:oauth:2.0:oob**.
 
+::: form action="create_action" submitText="Make this change for me" :::
 
 ::: zone-end
-
-::: form action="create_action" submitText="Make this change for me" :::
 
 #### Step 2: Download your Visual Studio project
 
